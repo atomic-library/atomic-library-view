@@ -48,7 +48,7 @@ function App() {
         "
         >
         <Header h='80px' bg="#ccc" span="header"/>
-        <Main main flex wrap span="main" gap="10px">
+        <Main main flex flexWrap span="main" gap="10px">
             <Box  h='200px' bg="#909A9B" />
             <Box  h='200px' bg="#909A9B" />
             <Box  h='200px' bg="#909A9B" />
@@ -78,7 +78,7 @@ export default App
         "
           >
             <Header h='80px' bg='#ccc' span='header' />
-            <Main flex wrap span='main' gap='10px'>
+            <Main flex flexWrap span='main' gap='10px'>
               <Box h='200px' bg='#909A9B' />
               <Box h='200px' bg='#909A9B' />
               <Box h='200px' bg='#909A9B' />
