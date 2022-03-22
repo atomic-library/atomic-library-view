@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <clipPath id="clip-Artboard_1">
+      <rect width="500" height="500"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+    <rect width="500" height="500" fill="#fff"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="68.5" cy="68.5" r="68.5" transform="translate(182 175)" fill="#e9e9e9"/>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(87 80)" fill="none" stroke="#e9e9e9" stroke-width="10">
+      <circle cx="163.5" cy="163.5" r="163.5" stroke="none"/>
+      <circle cx="163.5" cy="163.5" r="158.5" fill="none"/>
+    </g>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="24.5" cy="24.5" r="24.5" transform="translate(226 61)" fill="#e9e9e9"/>
+  </g>
+</svg>

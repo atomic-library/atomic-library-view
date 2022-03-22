@@ -1,0 +1,149 @@
+:root{
+  --color-text: #2C3E50;
+  --color-title: #2D2D2D;
+  --color-sub-title:#273B49;
+  --text-size: 18px;
+  --background-light: #fff;
+  --transform: 1.5;
+  --link-color: #007CF0;
+  --link-color-hover: #0285FF;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::after{
+  box-sizing: border-box;
+}
+*::before {
+  box-sizing: border-box;
+ 
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-light);
+  color: var(--color-text);
+  font-size: 1.125rem;
+}
+
+body::-webkit-scrollbar{
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* --------------------------- */
+a{
+  color: #787D87;
+  font-size: 1.25rem;
+  margin: 12px 15px 12px 0;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a:hover{
+  background: linear-gradient(to right, #007CF0 0%, #00DFD8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: #007FFF; */
+}
+.active{
+  color: #273B49;
+}
+.link-title{
+  font-weight: 500;
+  color: #273B49;
+  
+}
+.link {
+  color: var(--link-color);
+  font-size: var(--text-size);
+}
+
+
+/* --------------------------- */
+h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  color: var(--color-title);
+  margin-bottom: 10px;
+}
+h2{
+  text-align: center;
+}
+h3{
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+h2, h3, h4, h5, h6 {
+  color: var(--color-sub-title);
+  margin-bottom: 10px;
+  
+}
+.main-title {
+  font-size: 5.625rem;
+  font-weight: 900;
+}
+.main-title span{
+  background: linear-gradient(to right, #007CF0 0%, #00DFD8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* --------------------------- */
+p{
+  font-size: var(--text-size);
+  text-align: justify;
+  line-height: 1.5;
+}
+/* --------------------------- */
+ul{
+  margin: 0 1rem;
+}
+/* --------------------------- */
+.codeBlock__pre{
+  text-align: left;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 15px;
+  margin: 1rem 0;
+
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+}
+.codeBlock__link {
+  position: absolute;
+  right: 0px ;
+  top: -15px;
+
+}
+.codeBlock__icon {
+  padding: 15px;
+  color: #ccc;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.codeBlock__icon:hover{
+  cursor: pointer;
+}
+code{
+  background: #f2f2f2;
+  padding: 0 8px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  margin: 3px;
+}
+
+.closeMenu{
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  height: 0px;
+}
+.openMenu {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+}
