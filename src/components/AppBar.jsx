@@ -10,6 +10,7 @@ const AppBar = () => {
       span='header'
       p='0px 40px'
       bg='#fff'
+      z='2'
     >
       <Link className='link-title' to='/'>Atomic library</Link>
       <Nav>
