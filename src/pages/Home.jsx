@@ -38,7 +38,6 @@ const Home = () => {
             className='link'
             href='https://bradfrost.com/blog/post/atomic-web-design/'
           >
-            {' '}
             atomic design,
           </a>
           is intended to be a set of components, functions, constants and other

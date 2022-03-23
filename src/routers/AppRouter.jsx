@@ -12,17 +12,10 @@ import {
   Theme,
   Css,
   About,
-  Join
+  Join,
+  Core
 } from '../pages'
 
-import {
-  CoreComponents,
-  CoreFunctions,
-  CoreConstants,
-  CoreUsage,
-  CoreInstallation,
-  CoreProvider
-} from '../pages/core'
 const AppRouter = () => {
   return (
     <Router>
@@ -30,15 +23,7 @@ const AppRouter = () => {
         <Route index element={<Landing />} />
         <Route path='dashboard' element={<Dashboard />}>
           <Route index element={<Home />} />
-          <Route path='core'>
-            <Route path='installation' element={<CoreInstallation />} />
-            <Route path='usage' element={<CoreUsage />} />
-            <Route path='components' element={<CoreComponents />} />
-            <Route path='functions' element={<CoreFunctions />} />
-            <Route path='constants' element={<CoreConstants />} />
-            <Route path='provider' element={<CoreProvider />} />
-            <Route path='*' element={<NotFound />} />
-          </Route>
+          <Route path='core' element={<Core />} />
           <Route path='components' element={<Components />} />
           <Route path='my-system' element={<MySystem />} />
           <Route path='hooks' element={<Hooks />} />

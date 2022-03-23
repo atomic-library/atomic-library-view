@@ -8,7 +8,7 @@ import Theme from './Theme'
 import Css from './Css'
 import About from './About'
 import Join from './Join'
-
+import Core from './Core'
 export {
   Home,
   NotFound,
@@ -19,5 +19,6 @@ export {
   Theme,
   Css,
   About,
-  Join
+  Join,
+  Core
 }
