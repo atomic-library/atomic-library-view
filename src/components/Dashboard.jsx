@@ -1,6 +1,5 @@
 import { Navbar, Nav } from 'atomic-library-core'
 import { NavLink, Outlet } from 'react-router-dom'
-import { useState } from 'react'
 import AppBar from './AppBar'
 // -----------------------STYLE--------------------------//
 

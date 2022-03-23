@@ -226,9 +226,269 @@ const MyComponent = () => {
         </ul>
         <br />
         <h2>Provider</h2>
+        <p>You can use <code>AtomicContext</code> to pass values to several elements. for example:</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import {
+  Box as Wrapper,
+  Header,
+  Main,
+  Aside,
+  Footer,
+  Box,
+  AtomicContext
+} from 'atomic-library-core'
+
+function App() {
+return (
+  <Wrapper
+      grid
+      gap="10px"
+      size="lg"
+      cols="1fr 1fr 1fr"
+      areas="
+        'header header header'
+        'main main aside'
+        'footer footer footer'
+    "
+    >
+      <AtomicContext.Provider value={{ bg: "#ccc", rounded: true }}>
+        <Header h="80px" span="header" />
+        <Main flex flexWrap bg="#fff" gap="10px" span="main">
+          <Box h="200px" />
+          <Box h="200px" />
+          <Box h="200px" />
+        </Main>
+        <Aside h="400px" m="0" span="aside" />
+        <Footer h="80px" span="footer" />
+      </AtomicContext.Provider>
+    </Wrapper>
+)
+}
+
+export default App
+          `}
+        />
         <h2>Theme</h2>
-        <h2>Functions</h2>
+        <p>You can use <code>createTheme()</code> to modify the breackpoints, the Max Widths, create variants
+          and add custom values, for example:
+        </p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import { createTheme } from 'atomic-library-core'
+
+createTheme({
+    breakPoints: {
+        small: '@media (max-width: 540px)',
+        medium: '@media (max-width: 720px)',
+        large: '@media (max-width: 960px)',
+    }, 
+    maxWidths: {
+        card: '200px',
+        container: '720px',
+        wrapper: '960px',
+    },
+    varians: {
+        buttons: {
+            danger: 'background: red; color: #fff;',
+            ghostPurple: 'border: 1px solid purple; background: none ;',
+        },
+        card: 'border-radius: 5px; background: #ccc;',
+    },
+    values: {
+        colors: {
+            primary: '#f2f2f2',
+            secondary: '#fff',
+            text: '#ccc'
+        }
+    }
+})
+            `}
+        />
+        <p>You need to use this function in a high component, for example:</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import { createTheme } from 'atomic-library-core'
+import myTheme from './myTheme' //this is a file that you can download or create
+
+createTheme(myTheme)
+
+const App = () => {
+    return <div>App</div>
+}
+            `}
+        />
+        <p>in addition, values such as breakpoints or values will only be accessible by styled components using the customizer function.</p>
+
+        <p>here you have examples</p> <br />
+        <p>breakpoints</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import {createTheme, Theme, Box} from 'atomic-library-core'
+
+createTheme({
+    breakPoints: {
+        ...Theme,
+        customBreak1: '@media (max-width: 1200px)',
+        customBreak2: '@media (max-width: 250px)'
+    }
+})
+
+const MyComponent = () => {
+    return (
+        <>
+            <Box
+                myStyle={{
+                    break: {
+                        sm: {bg: 'red},
+                        md: {bg: 'green'},
+                        customBreak1: {bg: 'yellow'},
+                        customBreak2: {bg: 'gray'}
+                    }
+                }}
+            >
+                <p>lorem ipsum, is simply dummy text of the printing and typesetting</p>
+            </Box>
+        </>
+    )
+}
+
+            `}
+        />
+        <p>maxWidths</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import {createTheme, Box} from 'atomic-library-core'
+
+createTheme({
+    maxWidths: {
+        card: '200px',
+        container: '720px',
+        wrapper: '960px',
+    }
+})
+
+const MyComponent = () => {
+    return (
+        <>
+            <Box size="Wrapper">
+                <Box size="container">
+                    <Box size="card">
+                        <p>lorem ipsum, is simply dummy text of the</p>
+                    <Box>
+                    <Box size="card">
+                        <p>lorem ipsum, is simply dummy text of the</p>
+                    <Box>
+                    <Box size="card">
+                        <p>lorem ipsum, is simply dummy text of the</p>
+                    <Box>
+                <Box>
+            <Box>
+        </>
+    )
+}
+            `}
+        />
+        <p>variants</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import {createTheme, Box, myBtn} from 'atomic-library-core'
+import sampleEffect2 from './sampleEffect2'
+
+let effect1 = sampleEffect2({bg: '#286cff'})
+let effect2 = sampleEffect2({bg: '#cc1010'})
+let effect1 = sampleEffect2({bg: '#2f9b05'})
+createTheme({
+    varians: {
+        buttons: {
+            variant1: effect1,
+            variant2: effect2,
+            variant3: effect3
+        },
+        card: 'border-radius: 5px; font-size: 12px;',
+    }
+})
+
+const MyComponent = () => {
+    return (
+        <>
+            <MyBtn variants={["buttons.variant1"]}>button</MyBtn>
+            <MyBtn variants={["buttons.variant2"]}>button</MyBtn>
+            <MyBtn variants={["buttons.variant3"]}>button</MyBtn>
+            <Box variants={["buttons.variant1", "Card"]}>
+                <p className="effect-content">lorem ipsum dolor sit</p>
+            </Box>
+        </>
+    )
+}
+            `}
+        />
+        <p>the advantage of this is that you can, for example, run style effects once and use them throughout the application</p>
+        <br />
+        <p>values</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import {createTheme, Box, myBtn} from 'atomic-library-core'
+import sampleEffect2 from './sampleEffect2'
+
+let effect1 = sampleEffect2({bg: '#286cff'})
+let effect2 = sampleEffect2({bg: '#cc1010'})
+let effect1 = sampleEffect2({bg: '#2f9b05'})
+createTheme({
+    values: {
+        shadows: {
+            s1: '2px 3px 5px #ccc',
+            s2: '2px 3px 5px #cc1010',
+            s3: '4px 6px 8px #2f9b05',
+        },
+        colors: {
+            primary: '#f2f2f2'
+            secondary: '#fff',
+            text: '#ccc'
+        },
+        border: '1px solid #ccc'
+    }
+})
+
+const MyComponent = () => {
+    return (
+        <>
+            <Box b="[border]" boxShadow="[shadows.s1]">
+                <p>lorem ipsum, is simply dummy text of the</p>
+            </Box>
+        </>
+    )
+}
+            `}
+        />
         <h2>Constants</h2>
+        <p>This package provides some utility constants, which are as follows</p>
+        <p><b>Theme</b>. This constant contains the default values of breakPoints and maxWidths,
+          you can see it <a href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/Theme.js'>clicking here</a>
+        </p> <br />
+        <p><b>MyColors</b>. This constant contains a series of colors that might be useful to you.
+          you can see it <a href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/MyColors.js'>clicking here</a>
+        </p>
+        <br />
+        <p><b>MyThemeColors</b>. This constant contains some MyColors colors organized for ease of use.
+          you can see it <a href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/MyThemeColors.js'>clicking here</a>
+        </p>
+        <br />
+        <h2>Functions</h2>
+        <p>
+          apart from those already mentioned, there is one more function that the components of
+          this package use: getProperties(), although it is for internal operation you can
+          also use it, you can see it
+          <a className='link' href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/getProperties.js'> clicking here</a>
+        </p>
+
       </Content>
     </Layout>
   )

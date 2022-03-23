@@ -224,7 +224,7 @@ return (
       "
     >
       <Header  h='80px' bg="#ccc" span="header"/>
-      <Main  flex flexWrap span="main">
+      <Main  flex flexWrap gap="10px" span="main">
         <Box  h='200px' bg="#909A9B" />
         <Box  h='200px' bg="#909A9B" />
         <Box  h='200px' bg="#909A9B" />

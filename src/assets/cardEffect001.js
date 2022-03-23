@@ -1,7 +1,7 @@
 const cardEffect001 = ({
   time = '.2s',
   translate = '-3px, -3px',
-  shadow = '3px 5px 8px #ccc'
+  shadow = '3px 5px 8px #e4e4e4'
 } = false) => `
     transition: ${time};
     :hover{
