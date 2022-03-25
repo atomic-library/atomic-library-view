@@ -101,6 +101,13 @@ p{
   text-align: justify;
   line-height: 1.5;
 }
+.p-landing {
+  font-size: 1.25rem;
+}
+.title-landing{
+  font-size: 3.5rem;
+  font-weight: 900;
+}
 /* --------------------------- */
 ul{
   margin: 0 1rem;
@@ -117,6 +124,14 @@ ul{
   overflow-x: auto;
   overflow-y: hidden;
   
+}
+
+.codeBlock__pre::-webkit-scrollbar {
+  width: 5px;
+ }
+ .codeBlock__pre::-webkit-scrollbar-thumb {
+   background: #414141;
+   border-radius: 10px;
 }
 .codeBlock__link {
   position: absolute;

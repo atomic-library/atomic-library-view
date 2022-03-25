@@ -428,10 +428,10 @@ astral-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-atomic-library-core@1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/atomic-library-core/-/atomic-library-core-1.2.3.tgz#e796ecb7a5944a98f14302c79f8933a309bac4f0"
-  integrity sha512-RHlmfV1tsvecvShNCbx5f+K5N7OZZ68g9vndHQCHnm+b7VkJoW8KQtT7nqdzrs8wx243BFgAhIMnb7yegVPp2w==
+atomic-library-core@1.2.9:
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/atomic-library-core/-/atomic-library-core-1.2.9.tgz#89e1625218e5ebd1d64e7e9a3ac33def318124de"
+  integrity sha512-n8utE5/8aakk6MZHntBJcCmLsQyBXPAvmlAo/3QZO6y5KjJ7j3W8E1wR3VyIQMbiUhAzZe8WZbezZCNWr3TlgA==
   dependencies:
     styled-components "^5.3.3"
 
