@@ -473,14 +473,6 @@ const MyComponent = () => {
         <p><b>Theme</b>. This constant contains the default values of breakPoints and maxWidths,
           you can see it <a className='link' href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/Theme.js'>clicking here</a>
         </p> <br />
-        <p><b>MyColors</b>. This constant contains a series of colors that might be useful to you.
-          you can see it <a className='link' href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/MyColors.js'>clicking here</a>
-        </p>
-        <br />
-        <p><b>MyThemeColors</b>. This constant contains some MyColors colors organized for ease of use.
-          you can see it <a className='link' href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/MyThemeColors.js'>clicking here</a>
-        </p>
-        <br />
         <h2>Functions</h2>
         <p>
           apart from those already mentioned, there is one more function that the components of
