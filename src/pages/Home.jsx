@@ -112,7 +112,7 @@ const Home = () => {
           developed in an easy and simple way, which
           you can customize and, being standardized, use them with the same
           properties and the same logic.
-        </p>
+        </p> <br />
         <h2>Overview</h2>
         <h3>Core</h3>
         <p>
@@ -126,31 +126,31 @@ const Home = () => {
           change default values like
           the maximum width of containers or breakpoints, as well as add
           constant values that can be used throughout the application.
-        </p> <br />
+        </p>
         <h3>myStyle and customizer</h3>
         <p>
           myStyle is a very important prop which have all the components. with this prop you can style the components adding or modifying any css property
           of the component, for example, font-family, background, padding, etc. This prop works from customizer,
           a function included in the core
-        </p> <br />
+        </p>
         <h3>Components</h3>
         <p>The components are created by the comunity following a set of rules and standards.
           For example in the props, of which there are multiple types, such as styling props, logic props, or build props,
           which in turn are divided into more types. for example a build prop of app bars is links, which receive
           an array of objects with the link properties, such as name, link or icon.
           this way you can have multiple pre-built AppBar options (i.e. AppBarDribbble or AppBarInstagram) and they will all receive the same property for adding links.
-        </p> <br />
+        </p>
         <h3>Custom Hooks</h3>
         <p>The comunity can create their own custom hooks such as useFetch or useDimensions and share it with
           others
-        </p><br />
+        </p>
         <h3>Style Functions</h3>
         <p>
           Style functions are, simply put, classes with variable values. For instance, if you run
           <code>cardEffect()</code> this will return a code that you can insert  into a component via  <code>insertStyleBefore</code> or
           <code>insertStyle</code> but you can also run <code>{"cardEffect({time: '.3s', translate: '-10px, -20px'})"}</code>
           to get a custom value
-        </p> <br />
+        </p>
         <h3>Style Effects</h3>
         <p>
           Style effects are very similar to style functions, the difference is that a style effect is executed
@@ -158,17 +158,17 @@ const Home = () => {
           will return a code that changes the background on hover by default, but if you execute
           <code>{"bgGradientEffect({when: 'active', values: ['red', 'blue']})"}</code>
           the change will occur on active. (this example is simple, but with this you can save hundreds of lines of code)
-        </p> <br />
+        </p>
         <h3>Css</h3>
         <p>
           Unlike other libraries or frameworks, atomic library does not try to run away from css,
           but use it as a support, you can download css files, with different styles and default
           classes. from normalize to entire css systems.
-        </p> <br />
+        </p>
         <h3>Utils</h3>
         <p>in this part you can find a lot of useful constants such as colors, shadows, spacing or
           specific functions already developed and shared by the community.
-        </p> <br />
+        </p>
         {/* <h3>Sets</h3> */}
         <h3>My System</h3>
         <p>This is a useful tool we provide you to build your own systems, for example adding AppBarInstagram, FooterAmazon,
