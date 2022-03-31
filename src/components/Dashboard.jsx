@@ -1,4 +1,5 @@
-import { Navbar, Nav } from 'atomic-library-core'
+import { Nav } from 'atomic-library-core'
+import Navbar from './Navbar'
 import { NavLink, Outlet } from 'react-router-dom'
 import AppBar from './AppBar'
 // -----------------------STYLE--------------------------//

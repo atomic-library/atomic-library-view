@@ -1,5 +1,5 @@
 import { Layout, CodeBlock } from '../components'
-import { Box, Box as Content } from 'atomic-library-core'
+import { Box, Box as Content, Ul } from 'atomic-library-core'
 import { Link } from 'react-router-dom'
 
 const Core = () => {
@@ -7,7 +7,7 @@ const Core = () => {
     <Layout>
       <Content size='md' p='50px 30px'>
         {/* <h1>atomic-library-core</h1> <br /> <br /> */}
-        <h2>Installation</h2> <br />
+        <h2>Installation</h2>
         <h3>npm</h3>
         <CodeBlock
           language='bash'
@@ -18,7 +18,7 @@ const Core = () => {
           language='bash'
           code=' yarn add atomic-library-core'
         /> <br />
-        <h2>The heart</h2> <br />
+        <h2>The heart</h2>
         <p>styled-components is very useful because it allows you to modify the style of an element in a js file,
           for example:
         </p>
@@ -36,7 +36,7 @@ const Link = styled.a'
         <p>
           on a specific component is very good, but what if you want it to be highly reusable and also
           completely customizable, well, this is where the idea of customizer comes in.
-        </p> <br />
+        </p>
         <h3>customizer</h3>
         <p>This function is very simple, it recieves an object, iterates over it and returns a string, for instance:</p>
         <CodeBlock
@@ -105,7 +105,7 @@ const MyComponent = () => {
         myStyle={{
           bg: state ? 'red': 'orange',
           c: colors.text, 
-          p: '1rem'
+          p: '1rem',
           'h2': {
             c: colors.title,
             fs: '2rem',
@@ -127,8 +127,8 @@ const MyComponent = () => {
         />
         <p>The idea is not that you style the whole component using this function,
           but that you have the ability to modify any property of the component.
-          you can use camel case or abbreviations e.g.
         </p>
+        <p> you can use camel case or abbreviations e.g.</p>
         <CodeBlock
           language='jsx'
           code={`
@@ -144,11 +144,50 @@ customizer({w: '100%', h: '100px', br: '5px'})
           > click here
           </a>
         </p> <br />
-        <h2>Components</h2>
-        <p>This package includes some useful components for development, which are as follows:</p>
-        <br />
-        <h3>Containers</h3>
-        <p>The containers are:</p>
+        <h2>Elements</h2>
+        <p>An element is a style-component created using customizer and other funcions, all of them receive the same properties,
+          ignoring the properties that they receive by default. this elements are as follows:
+        </p>
+        <ul>
+          <li>Article</li>
+          <li>Aside</li>
+          <li>Article</li>
+          <li>Box</li>
+          <li>Aside</li>
+          <li>Footer</li>
+          <li>Form</li>
+          <li>Header</li>
+          <li>Main</li>
+          <li>Section</li>
+          <li>Nav</li>
+          <li>Code</li>
+          <li>Pre</li>
+          <li>Button</li>
+          <li>Img</li>
+          <li>Paragraph</li>
+          <li>H1</li>
+          <li>H2</li>
+          <li>H3</li>
+          <li>H4</li>
+          <li>H5</li>
+          <li>H6</li>
+          <li>Span</li>
+          <li>Input</li>
+          <li>Blockquote</li>
+          <li>Hr</li>
+          <li>Ul</li>
+          <li>Ol</li>
+          <li>Li</li>
+          <li>Table</li>
+          <li>Td</li>
+          <li>Tr</li>
+          <li>Th</li>
+          <li>Thead</li>
+          <li>Tbody</li>
+          <li>Tfoot</li>
+          <li>Textarea</li>
+        </ul>
+        <p>The following elements have <code>width: 100%; margin: auto;</code> by default. </p>
         <ul>
           <li>Box</li>
           <li>Section</li>
@@ -159,30 +198,48 @@ customizer({w: '100%', h: '100px', br: '5px'})
           <li>Aside</li>
           <li>Article</li>
           <li>Form</li>
-          <li>Img</li>
-        </ul> <br />
-        <p>All of these are basically the same component, the difference is that each one returns a semantic tag.
-        </p> <br />
-        <p>These receive as props any property accepted by the customizer function, e.g.</p>
+        </ul>
+        <p>All elements recieves <code>myStyle</code> as prop. for example:</p>
         <CodeBlock
           language='jsx'
           code={`
-import { Box } from 'atomic-library-core'
+import {Box, Button} from 'atomic-library-core'
 
-const MyComponent = () => {
+const Component = () => {
   return (
     <>
-      <Box c="red" br="5px" mT="10px" >
-        <p>lorem ipsum, is simply dummy text of the printing and typesetting</p>
+      <Box myStyle={{bg: '#f2f2f2', c: '#141414', br: '10px'}}>
+        <p>lorem ipsum, is simply dummy text of the </p>
       </Box>
-      <Box color="red" borderRadius="5px" marginTop="10px" >
-        <p>lorem ipsum, is simply dummy text of the printing and typesetting</p>
-      </Box>
+      <Button myStyle={{bg: 'blue', c: '#fff', br: '10px'}}>
+        <p>lorem ipsum, is simply dummy text of the </p>
+      </Button>
     </>
   )
 }
           `}
         />
+        <p>They can also receive as pro any value accepted by the customizer function</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import {Box, Button} from 'atomic-library-core'
+
+const Component = () => {
+  return (
+    <>
+      <Box bg='#f2f2f2' c='#141414' br='10px'>
+        <p>lorem ipsum, is simply dummy text of the </p>
+      </Box>
+      <Button bg='blue' color='#fff' borderRadius='10px'>
+        <p>lorem ipsum, is simply dummy text of the </p>
+      </Button>
+    </>
+  )
+}
+          `}
+        />
+
         <p>but in addition to these they also receive other very useful properties such as:</p> <br />
         <p>FlexBox props. The following props are useful for creating a flexible containers</p>
         <ul>
@@ -430,7 +487,7 @@ const MyComponent = () => {
             `}
         />
         <p>the advantage of this is that you can, for example, run style effects once and use them throughout the application</p>
-        <br />
+
         <p>values</p>
         <CodeBlock
           language='jsx'
@@ -472,7 +529,16 @@ const MyComponent = () => {
         <p>This package provides some utility constants, which are as follows</p>
         <p><b>Theme</b>. This constant contains the default values of breakPoints and maxWidths,
           you can see it <a className='link' href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/Theme.js'>clicking here</a>
-        </p> <br />
+        </p>
+        <p><b>Colors</b>. This constant contains a series of colors
+          you can see it <a className='link' href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/Colors.js'>clicking here</a>
+        </p>
+        <p><b>ThemeColors1</b>. This constant contains a series of ordered colors
+          you can see it <a className='link' href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/ThemeColors1.js'>clicking here</a>
+        </p>
+        <p><b>ThemeColors2</b>. This constant contains a series of ordered colors
+          you can see it <a className='link' href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/ThemeColors2.js'>clicking here</a>
+        </p>
         <h2>Functions</h2>
         <p>
           apart from those already mentioned, there is one more function that the components of

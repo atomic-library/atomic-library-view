@@ -13,7 +13,7 @@ const buttonEffect1 = buttonEffect001()
 const buttonEffect2 = buttonEffect002({ when: 'active', bg: '#286cff' })
 const Box2 = styled(Box)`
   border-radius: 5px;
-  padding: 1rem;
+  padding: 0 1rem;
   border: 1px solid #ccc;
   ${({ effect1 = false }) => effect1 && buttonEffect001(effect1)}
   ${({ effect2 = false }) => effect2 && buttonEffect002(effect2)}
@@ -125,7 +125,6 @@ const MyComponent = () => {
     <>
       <Box 
         b='1px solid #ccc' 
-        p='1rem'
         rounded 
         insertStyle={effect1} 
       >
@@ -153,7 +152,7 @@ const MyComponent = () => {
             <p>Style effects are very similar to style functions, the difference is that a style effect is executed
               in a special state
             </p> <br />
-            <Box rounded b='1px solid #ccc' insertStyle={buttonEffect1} p='1rem'>
+            <Box rounded b='1px solid #ccc' insertStyle={buttonEffect1}>
               <p className='effect-content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,</p>
             </Box>
             <Box p='1rem' b='1px solid #ccc' mT='1rem' rounded insertStyle={buttonEffect2}>
@@ -176,7 +175,7 @@ import sampleEffect2 from './sampleEffect2' //this is a file that you can downlo
 
 const Box2 = styled(Box)'
   border-radius: 5px;
-  padding: 1rem;
+  padding: 0 1rem;
   border: 1px solid #ccc;
   $ {({effect1 = false}) => effect1 && sampleEffect1(effect1)}
   $ {({effect2 = false}) => effect2 && sampleEffect2(effect2)}

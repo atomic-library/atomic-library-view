@@ -13,7 +13,7 @@ const buttonEffect1 = buttonEffect001()
 const buttonEffect2 = buttonEffect002({ when: 'active', bg: '#286cff' })
 const Box2 = styled(Box)`
   border-radius: 5px;
-  padding: 1rem;
+  padding: 0 1rem;
   border: 1px solid #ccc;
   ${({ effect1 = false }) => effect1 && buttonEffect001(effect1)}
   ${({ effect2 = false }) => effect2 && buttonEffect002(effect2)}
@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <Layout>
       <Content size='md' p='50px 30px'>
-        <h1>Atomic Library</h1> <br /> <br />
+        <h1>Atomic Library</h1> <br />
         <Box h='300px' myStyle={{ img: { objectFit: 'cover' } }}>
           <img
             src={atomicDesign}
@@ -32,7 +32,6 @@ const Home = () => {
             height='100%'
           />
         </Box>{' '}
-        <br />
         <p>
           <b>Atomic library</b>, inspired by the concept of
           <a
@@ -44,72 +43,52 @@ const Home = () => {
           is intended to be a set of components, functions, constants and other
           useful elements in web development, from react components to css
           files. but how?
-        </p>
-        <br /> <br />
-        <h2>Structure</h2> <br />
+        </p><br />
+        <h2>Structure</h2>
         <p>The first thing to know, are the levels</p>
-        <br />
         <ul>
           <li>
-            <p>
-              <strong>Atoms </strong>
-              are the basic components of matter. Applied to our library, they
-              are the smallest elements, which do not depend on others, e.g. an
-              icon, a button, a label, but also a constant, a function or even a
-              styled-component.
-            </p>
-          </li>{' '}
-          <br />
+            <strong>Atoms </strong>
+            are the basic components of matter. Applied to our library, they
+            are the smallest elements, which do not depend on others, e.g. an
+            icon, a button, a label, but also a constant, a function or even a
+            styled-component.
+          </li> <br />
           <li>
-            <p>
-              <strong>Molecules </strong>
-              are elements composed of two or more atoms, i.e. a function that
-              depends on an external constant, a button that depends on an icon,
-              a component that depends on another component, but in any case,
-              being small blocks.
-            </p>
-          </li>
-          <br />
+            <strong>Molecules </strong>
+            are elements composed of two or more atoms, i.e. a function that
+            depends on an external constant, a button that depends on an icon,
+            a component that depends on another component, but in any case,
+            being small blocks.
+          </li> <br />
           <li>
-            <p>
-              <strong>Organisms </strong>
-              are elements formed by two or more molecules. in this case, a
-              complete component, i.e. an AppBar, a Menu, a Card, a Form, etc.
-              elements ready to build a page.
-            </p>
-          </li>
-          <br />
+            <strong>Organisms </strong>
+            are elements formed by two or more molecules. in this case, a
+            complete component, i.e. an AppBar, a Menu, a Card, a Form, etc.
+            elements ready to build a page.
+          </li><br />
           <li>
-            <p>
-              <strong>A system </strong>
-              is a harmonic set of atoms, molecules and organism, which can be
-              used by the developer. For example, a system can be composed by a
-              set of icons, a constant of colors, multiple components like
-              AppBar, Slider, Card, Footer, etc. In addition to hooks, css
-              modules and any other type of files.
-            </p>
-          </li>
-          <br />
+            <strong>A system </strong>
+            is a harmonic set of atoms, molecules and organism, which can be
+            used by the developer. For example, a system can be composed by a
+            set of icons, a constant of colors, multiple components like
+            AppBar, Slider, Card, Footer, etc. In addition to hooks, css
+            modules and any other type of files.
+          </li><br />
           <li>
-            <p>
-              <strong>Templates </strong>
-              consist mainly of groups of organisms stitched together to form
-              pages. An application is already created, ready for content to be
-              inserted into it. This, with some degree of customization, but
-              limited by the already formed structure.
-            </p>
-          </li>
-          <br />
+            <strong>Templates </strong>
+            consist mainly of groups of organisms stitched together to form
+            pages. An application is already created, ready for content to be
+            inserted into it. This, with some degree of customization, but
+            limited by the already formed structure.
+          </li> <br />
           <li>
-            <p>
-              <strong>Pages </strong>
-              are specific instances of templates. Here, placeholder content is
-              replaced with real representative content to give an accurate
-              depiction of what a user will ultimately see.
-            </p>
+            <strong>Pages </strong>
+            are specific instances of templates. Here, placeholder content is
+            replaced with real representative content to give an accurate
+            depiction of what a user will ultimately see.
           </li>
         </ul>
-        <br />
         <p>
           This structure (although it is not the classification by which the
           content of this library will be ordered) it allows us to have a
@@ -119,8 +98,8 @@ const Home = () => {
           elements, not similar to the others, but with its own style and well
           defined, while standardized and easy to use.
         </p>
-        <br /> <br />
-        <h2>Development</h2> <br />
+        <br />
+        <h2>Development</h2>
         <p>
           This project is divided in two parts. the first one, is the{' '}
           <a className='link' to='/dashboard/core'>
@@ -134,7 +113,7 @@ const Home = () => {
           you can customize and, being standardized, use them with the same
           properties and the same logic.
         </p>
-        <h2>Overview</h2> <br />
+        <h2>Overview</h2>
         <h3>Core</h3>
         <p>
           The core (atomic-library-core) is a package of different components,
@@ -195,13 +174,13 @@ const Home = () => {
         <p>This is a useful tool we provide you to build your own systems, for example adding AppBarInstagram, FooterAmazon,
           Card015, etc to the folder components, or adding shadow024, colorPallet04, etc to constants or other folders. so your system will be documented, accessible and easy to share privately or publicly.
         </p> <br />
-        <h2>Quick Examples</h2> <br />
+        <h2>Quick Examples</h2>
         <h3>core</h3>
         <p>This is a little demo about the core container components. All of them are basically the same component,
           but with the difference that each one returns a semantic tag
         </p>
         <CodeBlock language='jsx' code={coreContainersStr} />
-        <p>Result:</p> <br />
+        <p>Result:</p>
         <Box>
           <Wrapper
             grid
@@ -254,7 +233,7 @@ const MyComponent = () => {
 export default MyComponent
         `}
         />
-        <p>Result: </p> <br />
+        <p>Result: </p>
         <Box
           myStyle={{
             bg: '#ccc', // or background: '#ccc'
@@ -287,7 +266,7 @@ const Container = styled.div'
         /> <br />
         <h3>Style Functions</h3>
         <CodeBlock language='jsx' code={styleFunctionsStr} />
-        <p>Result: </p> <br />
+        <p>Result: </p>
         <Box grid gap='1rem'>
           <Box
             insertStyle={cardEffect1} p='1rem' rounded bg='#f2f2f2'
@@ -316,7 +295,6 @@ const MyComponent = () => {
     <>
       <Box 
         b='1px solid #ccc' 
-        p='1rem'
         rounded 
         insertStyle={effect1} 
       >
@@ -338,8 +316,8 @@ const MyComponent = () => {
 }
 `}
         />
-        <p>Result: </p> <br />
-        <Box rounded b='1px solid #ccc' insertStyle={buttonEffect1} p='1rem'>
+        <p>Result: </p>
+        <Box rounded b='1px solid #ccc' insertStyle={buttonEffect1}>
           <p className='effect-content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,</p>
         </Box>
         <Box p='1rem' b='1px solid #ccc' mT='1rem' rounded insertStyle={buttonEffect2}>
@@ -359,7 +337,7 @@ import sampleEffect2 from './sampleEffect2' //this is a file that you can downlo
 
 const Box2 = styled(Box)'
   border-radius: 5px;
-  padding: 1rem;
+  padding: 0 1rem;
   border: 1px solid #ccc;
   $ {({effect1 = false}) => effect1 && sampleEffect1(effect1)}
   $ {({effect2 = false}) => effect2 && sampleEffect2(effect2)}

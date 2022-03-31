@@ -1,4 +1,5 @@
-import { Navbar, Nav } from 'atomic-library-core'
+import { Nav } from 'atomic-library-core'
+import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 
 const AppBar = () => {
