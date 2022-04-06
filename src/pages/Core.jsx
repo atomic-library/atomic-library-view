@@ -164,7 +164,7 @@ customizer({w: '100%', h: '100px', br: '5px'})
           <li>Pre</li>
           <li>Button</li>
           <li>Img</li>
-          <li>Paragraph</li>
+          <li>P</li>
           <li>H1</li>
           <li>H2</li>
           <li>H3</li>
@@ -194,7 +194,6 @@ customizer({w: '100%', h: '100px', br: '5px'})
           <li>Header</li>
           <li>Footer</li>
           <li>Main</li>
-          <li>Nav</li>
           <li>Aside</li>
           <li>Article</li>
           <li>Form</li>
