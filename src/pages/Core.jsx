@@ -246,10 +246,10 @@ const Component = () => {
           <li>inlineFlex</li>
           <li>flexWrap</li>
           <li>gap</li>
-          <li>flexColumn</li>
-          <li>flexColumnReverse</li>
-          <li>flexRow</li>
-          <li>flexRowReverse</li>
+          <li>flowColumn</li>
+          <li>flowColumnReverse</li>
+          <li>flowRow</li>
+          <li>flowRowReverse</li>
           <li>center</li>
           <li>y</li>
           <li>x</li>
@@ -262,6 +262,8 @@ const Component = () => {
           <li>rows</li>
           <li>areas</li>
           <li>gap</li>
+          <li>flowColumn</li>
+          <li>flowRow</li>
           <li>center</li>
           <li>y</li>
           <li>x</li>
