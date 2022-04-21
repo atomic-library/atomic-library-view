@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Nav, useComponentContext } from 'atomic-library-core'
+import { Header, Nav, useCompContext } from 'atomic-library-core'
 
 const headerStyles = {
   top: 'width: 100%; height: 80px; top: 0; aling-items: center;',
@@ -14,7 +14,7 @@ const navStyles = {
   left: 'flex-direction: column; max-height: 800px;'
 }
 const Navbar = ({ children, location, header, nav, position, ...rest }) => {
-  const { ...props } = useComponentContext() || false
+  const { ...props } = useCompContext() || false
   return (
     <Header
       insertStyleBefore={headerStyles[location || 'top'] + '.active {font-weight: 500;}'}
