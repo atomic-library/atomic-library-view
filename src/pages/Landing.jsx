@@ -3,7 +3,7 @@ import cardEffect001 from '../assets/cardEffect001'
 import buttonEffect001 from '../assets/buttonEffect001'
 import buttonEffect002 from '../assets/buttonEffect002'
 import { coreContainersStr, styleFunctionsLandingStr } from '../utils/codeExamples'
-import { Box, H2, Main, Footer, Aside, Header, Box as Wrapper, Colors } from 'atomic-library-core'
+import { Box, H2, Main, Footer, Aside, Header, Box as Wrapper } from 'atomic-library-core'
 import atomic from '../assets/atomic.svg'
 import styled from 'styled-components'
 
@@ -20,7 +20,7 @@ const Box2 = styled(Box)`
 `
 const Content = ({ text, code = '', reverse, ...rest }) => {
   return (
-    <Box flex flexWrap flexRowReverse={reverse} m='5rem auto' {...rest}>
+    <Box flex flexWrap flowRowReverse={reverse} m='5rem auto' {...rest}>
       <Box w='calc(50% - 1rem)'>
         <CodeBlock language='jsx' code={code} />
       </Box>
@@ -34,7 +34,7 @@ const Landing = () => {
   return (
     <>
       <AppBar />
-      <Wrapper
+      <Box
         h='40vh' bg='#fff' m='80px 0 0 0' flex center myStyle={{
           backgroundImage: `url(${atomic})`,
           backgroundRepeat: 'no-repeat',
@@ -43,7 +43,7 @@ const Landing = () => {
         }}
       >
         <h1 className='main-title'>Atomic Library</h1>
-      </Wrapper>
+      </Box>
       <Box h='calc(60vh - 80px)' bg='rgb(32, 35, 41)' flex center>
         <H2 c='#fff' size='md'>Want amazing components, functions, elements and other useful
           files, even css? then this is the place
@@ -59,7 +59,7 @@ const Landing = () => {
           code={coreContainersStr}
           text={
             <>
-              <Box
+              <Wrapper
                 grid
                 gap='10px'
                 size='lg'
@@ -78,53 +78,10 @@ const Landing = () => {
                 </Main>
                 <Aside h='400px' bg='#CACACA' m='0' span='aside' />
                 <Footer h='80px' bg='#ccc' span='footer' />
-              </Box>
+              </Wrapper>
             </>
           }
         />
-        <Box grid gap='2rem'>
-          <Box grid flowColumn rows='repeat(10, 1fr)' size='md' rounded of='hidden' cols='repeat(20, 1fr)'>
-            {Object.values(Colors).map(color =>
-              <Box
-                myStyle={{ ':hover': { tf: 'scale(1.3)', tt: '.2s', br: '2px' } }}
-                key={color}
-                aspectRatio='1/1'
-                bg={color}
-              />
-            )}
-          </Box>
-          <CodeBlock
-            language='jsx'
-            code={`
-import {Box, Colors} from 'atomic-library-core';
-
-const TableColors = () => {
-  return(
-    <Box 
-      grid 
-      flowColumn 
-      rows='repeat(10, 1fr)' 
-      cols='repeat(20, 1fr)'
-    >
-      {Object.values(Colors).map(color =>
-        <Box
-          myStyle={{ 
-            ':hover': { 
-              tf: 'scale(1.3)', 
-              tt: '.2s', br: '2px' 
-            } 
-          }}
-          key={color}
-          aspectRatio='1/1'
-          bg={color}
-        />
-      )}
-    </Box>
-  )
-}
-          `}
-          />
-        </Box>
         <Content
           bg='#f2f2f2'
           br='10px'
@@ -254,10 +211,8 @@ const MyComponent = () => {
         <Box2>
           <p>Lorem ipsum dolor sit amet.</p>
         </Box2>
-
-        <H2 m='4rem' className='title-landing'>And much more</H2>
-
       </Box>
+      <H2 m='4rem' className='title-landing'>And much more</H2>
 
     </>
   )
