@@ -36,7 +36,7 @@ const Dashboard = ({ children }) => {
       <AppBar />
       {/* lateral menu */}
       <Navbar location='left' position='fixed' myStyle={menuStyle}>
-        <Nav flex flexWrap flexColumn>
+        <Nav flex flexWrap flowColumn>
           <NavLink exact to='/dashboard' activeClassName='active'>Home</NavLink>
           <NavLink exact to='/dashboard/core' activeClassName='active'>Core</NavLink>
           <NavLink exact to='/dashboard/components' activeClassName='active'>Components</NavLink>
