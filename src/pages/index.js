@@ -9,6 +9,7 @@ import Css from './Css'
 import About from './About'
 import Join from './Join'
 import Core from './Core'
+import MuiClone from './MuiClone'
 export {
   Home,
   NotFound,
@@ -20,5 +21,6 @@ export {
   Css,
   About,
   Join,
-  Core
+  Core,
+  MuiClone
 }

@@ -15,7 +15,7 @@ const AppBar = () => {
     >
       <Link className='link-title' to='/'>Atomic library</Link>
       <Nav>
-        <Link to='/dashboard'>Documentation</Link>
+        <Link to='/dashboard/home'>Documentation</Link>
         {/* <Link to='/dashboard/Forum'>Forum</Link>
         <Link to='/dashboard/join'>Join</Link> */}
       </Nav>

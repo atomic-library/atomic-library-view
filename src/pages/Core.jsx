@@ -151,9 +151,7 @@ customizer({w: '100%', h: '100px', br: '5px'})
         <ul>
           <li>Article</li>
           <li>Aside</li>
-          <li>Article</li>
           <li>Box</li>
-          <li>Aside</li>
           <li>Footer</li>
           <li>Form</li>
           <li>Header</li>

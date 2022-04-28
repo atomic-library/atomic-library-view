@@ -13,9 +13,19 @@ import {
   Css,
   About,
   Join,
-  Core
+  Core,
+  MuiClone
 } from '../pages'
-
+import {
+  MuiCloneDataDisplay,
+  MuiCloneFeedback,
+  MuiCloneInputs,
+  MuiCloneLayout,
+  MuiCloneNavigation,
+  MuiCloneSurfaces,
+  MuiCloneUtils,
+  MuiCloneGettingStarted
+} from '../pages/mui-clone'
 const AppRouter = () => {
   return (
     <Router>
@@ -23,9 +33,22 @@ const AppRouter = () => {
         <Route index element={<Landing />} />
         <Route path='dashboard' element={<Dashboard />}>
           <Route index element={<Home />} />
+          <Route path='home' element={<Home />} />
           <Route path='core' element={<Core />} />
           <Route path='components' element={<Components />} />
           <Route path='my-system' element={<MySystem />} />
+          <Route path='mui-clone'>
+            <Route index element={<MuiCloneGettingStarted />} />
+            <Route path='inputs' element={<MuiCloneInputs />} />
+            <Route path='data-display' element={<MuiCloneDataDisplay />} />
+            <Route path='feedback' element={<MuiCloneFeedback />} />
+            <Route path='surfaces' element={<MuiCloneSurfaces />} />
+            <Route path='navigation' element={<MuiCloneNavigation />} />
+            <Route path='layout' element={<MuiCloneLayout />} />
+            <Route path='utils' element={<MuiCloneUtils />} />
+            <Route path='*' element={<NotFound />} />
+          </Route>
+          <Route path='mui-clone' element={<MuiClone />} />
           <Route path='hooks' element={<Hooks />} />
           <Route path='about' element={<About />} />
           <Route path='theme' element={<Theme />} />
