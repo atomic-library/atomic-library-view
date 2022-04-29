@@ -54,15 +54,29 @@ const MuiCloneGettingStarted = () => {
           <li>dark</li>
         </ul>
         <br />
-        <Alert subType='info' rounded type='ghost' fs='1rem'>
+        <Alert subType='info' rounded type='smooth' fs='1rem'>
           Note: if the component is an input, you can use inputType to set the type of the input
         </Alert>
         <br />
 
-        <h2>About</h2>
+        <p>Also, when using <code>component</code> prop, you need to use capitalize, since the component uses atomic-library-core components. for  example:</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+<Btn component="H1" >click</Btn>
+//instead of using
+<Btn component="h1" >click</Btn>
+//or
+<Avatar component="Button" >click</Avatar>
+//instead of using
+<Avatar component="button" >click</Avatar>
+          `}
+        />
+
+        <h2>Status of components</h2>
         <p>In the following tables i expose information about the components with the categories: component, status and description.</p>
         <p>If you want more information about the components you can go to the rest of the documentation </p>
-        <Alert subType='info' rounded type='ghost' fs='1rem'>
+        <Alert subType='info' rounded type='smooth' fs='1rem'>
           Note: this is the first version of the package so the components are not perfect and some have missing functionalities
         </Alert>
         <br />
@@ -70,7 +84,7 @@ const MuiCloneGettingStarted = () => {
         <table>
           <tr>
             <th>component</th>
-            <th>state</th>
+            <th>status</th>
             <th>description</th>
           </tr>
           <tr>
@@ -160,7 +174,7 @@ const MuiCloneGettingStarted = () => {
         <table>
           <tr>
             <th>component</th>
-            <th>state</th>
+            <th>status</th>
             <th>description</th>
           </tr>
           <tr>
@@ -228,7 +242,7 @@ const MuiCloneGettingStarted = () => {
         <table>
           <tr>
             <th>component</th>
-            <th>state</th>
+            <th>status</th>
             <th>description</th>
           </tr>
           <tr>
@@ -272,7 +286,7 @@ const MuiCloneGettingStarted = () => {
         <table>
           <tr>
             <th>component</th>
-            <th>state</th>
+            <th>status</th>
             <th>description</th>
           </tr>
           <tr>
@@ -304,7 +318,7 @@ const MuiCloneGettingStarted = () => {
         <table>
           <tr>
             <th>component</th>
-            <th>state</th>
+            <th>status</th>
             <th>description</th>
           </tr>
           <tr>
@@ -354,7 +368,7 @@ const MuiCloneGettingStarted = () => {
         <table>
           <tr>
             <th>component</th>
-            <th>state</th>
+            <th>status</th>
             <th>description</th>
           </tr>
           <tr>
@@ -392,7 +406,7 @@ const MuiCloneGettingStarted = () => {
         <table>
           <tr>
             <th>component</th>
-            <th>state</th>
+            <th>status</th>
             <th>description</th>
           </tr>
           <tr>
