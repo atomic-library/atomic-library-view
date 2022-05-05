@@ -168,5 +168,6 @@ td,th{
 table{
   border: 1px solid #ccc;
   border-collapse: collapse;
+  width: 100%;
   
 }

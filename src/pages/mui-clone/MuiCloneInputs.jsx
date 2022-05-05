@@ -1,8 +1,9 @@
 import { Layout, CodeBlock } from '../../components'
-import { Box as Content, Box, Label, Input } from 'atomic-library-core'
-import { Btn, Alert } from 'mui-clone'
+import { Box as Content, Box, Label, Input, Span } from 'atomic-library-core'
+import { Btn, Alert, Switch } from 'mui-clone'
 import { HiUpload } from 'react-icons/hi'
 import { FiTrash2 } from 'react-icons/fi'
+import { useState } from 'react'
 const Result = ({ children, ...rest }) => {
   return (
     <Box rounded p='1rem' b='1px solid #ccc' {...rest}>
@@ -12,6 +13,7 @@ const Result = ({ children, ...rest }) => {
 }
 
 const MuiCloneInputs = () => {
+  const [loading, setLoading] = useState(false)
   return (
     <Layout>
       <Content size='md' p='50px 30px'>
@@ -114,8 +116,77 @@ const UploadButton = () => {
           </Label>
 
         </Result>
+        <p>Use icons</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import { Btn } from 'mui-clone'
+import { HiUpload } from 'react-icons/hi'
+import { FiTrash2 } from 'react-icons/fi'
 
-        <Btn><Span mR='10px'><FiTrash2 /></Span> hola</Btn>
+const Buttons = () => {
+  return (
+    <>
+      <Btn startIcon={<HiUpload />}>Upload</Btn>
+      <Btn endIcon={<FiTrash2 />}>Delete</Btn>
+    </>
+  )
+}
+          `}
+        />
+        <Result>
+          <Btn startIcon={<HiUpload />}>Upload</Btn>
+          <Btn endIcon={<FiTrash2 />}>Delete</Btn>
+        </Result>
+        <p>Icon buttons</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import { Btn } from 'mui-clone'
+import { HiUpload } from 'react-icons/hi'
+import { FiTrash2 } from 'react-icons/fi'
+
+const Buttons = () => {
+  return (
+    <>
+      <Btn type='icon'><HiUpload /></Btn>
+      <Btn type='icon'><FiTrash2 /></Btn>
+    </>
+  )
+}
+          `}
+        />
+        <Result>
+          <Btn type='icon'><HiUpload /></Btn>
+          <Btn type='icon'><FiTrash2 /></Btn>
+        </Result>
+        <p>Loading buttons</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import { Btn, Switch } from 'mui-clone'
+import { useState } from 'react
+
+const Buttons = () => {
+  const [loading, setLoading] = useState(false)
+  return (
+    <>
+      <Switch 
+        checked={loading} 
+        onChange={() => { setLoading(!loading) }} 
+      />
+      <Btn loading={loading}>fetch</Btn>
+      <Btn loading={loading} loadingIndicator='loading...'>fetch</Btn>
+    </>
+  )
+}
+          `}
+        />
+        <Result>
+          <Switch checked={loading} onChange={() => { setLoading(!loading) }} />
+          <Btn loading={loading}>fetch</Btn>
+          <Btn loading={loading} loadingIndicator='loading...'>fetch</Btn>
+        </Result>
       </Content>
     </Layout>
   )

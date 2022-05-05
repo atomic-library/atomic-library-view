@@ -96,22 +96,22 @@ const MuiCloneGettingStarted = () => {
           <tr>
             <td>Button</td>
             <td>replaced</td>
-            <td>this component was replaced with `Btn`</td>
+            <td>this component was replaced with <code>Btn</code></td>
           </tr>
           <tr>
             <td>Btn</td>
             <td>done</td>
-            <td>this is the replacement for `Button`. This component return directly a `Button` element from atomic-library-core</td>
+            <td>this is the replacement for <code>Button</code> . This component return directly a <code>Button</code>  element from atomic-library-core</td>
           </tr>
           <tr>
             <td>ButtonGroup</td>
             <td>replaced</td>
-            <td>this component was replaced with `BtnGroup`</td>
+            <td>this component was replaced with <code>BtnGroup</code> </td>
           </tr>
           <tr>
             <td>BtnGroup</td>
             <td>done</td>
-            <td>this is the replacement for `ButtonGroup`</td>
+            <td>this is the replacement for <code>ButtonGroup</code> </td>
           </tr>
           <tr>
             <td>Checkbox</td>
@@ -168,11 +168,10 @@ const MuiCloneGettingStarted = () => {
             <td>in process</td>
             <td />
           </tr>
-        </table>
+          <tr>
+            <td colspan='3'><p><b>Data Display</b></p></td>
+          </tr>
 
-        <h3>Data Display</h3>
-
-        <table>
           <tr>
             <th>component</th>
             <th>status</th>
@@ -183,11 +182,7 @@ const MuiCloneGettingStarted = () => {
             <td>done</td>
             <td />
           </tr>
-          <tr>
-            <td />
-            <td />
-            <td />
-          </tr>
+
           <tr>
             <td>AvatarGroup</td>
             <td>done</td>
@@ -236,11 +231,9 @@ const MuiCloneGettingStarted = () => {
             <td>not necessary</td>
             <td />
           </tr>
-        </table>
-
-        <h3>Feedback</h3>
-
-        <table>
+          <tr>
+            <td colspan='3'><p><b>Feedback</b></p></td>
+          </tr>
           <tr>
             <th>component</th>
             <th>status</th>
@@ -300,7 +293,7 @@ const MuiCloneGettingStarted = () => {
           <tr>
             <td>Appbar</td>
             <td>not necesary</td>
-            <td />
+            <td>instead use <code>Navbar</code></td>
           </tr>
           <tr>
             <td>Card</td>
@@ -312,20 +305,23 @@ const MuiCloneGettingStarted = () => {
             <td>not necessary</td>
             <td />
           </tr>
-        </table>
-
-        <h3>Navigation</h3>
-
-        <table>
+          <tr>
+            <td colspan='3'><p><b>Navigation</b></p></td>
+          </tr>
           <tr>
             <th>component</th>
             <th>status</th>
             <th>description</th>
           </tr>
           <tr>
+            <td>Navbar</td>
+            <td>done</td>
+            <td>this is new component</td>
+          </tr>
+          <tr>
             <td>BottomNavigation</td>
             <td>not necessary</td>
-            <td />
+            <td>instead use <code>Navbar</code></td>
           </tr>
           <tr>
             <td>breadcrumbs</td>
@@ -362,11 +358,9 @@ const MuiCloneGettingStarted = () => {
             <td>not yet</td>
             <td />
           </tr>
-        </table>
-
-        <h3>Layout</h3>
-
-        <table>
+          <tr>
+            <td colspan='3'><p><b>Layout</b></p></td>
+          </tr>
           <tr>
             <th>component</th>
             <th>status</th>
@@ -398,13 +392,9 @@ const MuiCloneGettingStarted = () => {
             <td>not necessary</td>
             <td />
           </tr>
-        </table>
-
-        <h3>Utils</h3>
-
-        <p>this section is different to the original, and is stil in process</p>
-
-        <table>
+          <tr>
+            <td colspan='3'><p><b>Utils</b></p></td>
+          </tr>
           <tr>
             <th>component</th>
             <th>status</th>
