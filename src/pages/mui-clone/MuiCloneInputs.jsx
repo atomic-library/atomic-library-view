@@ -1,7 +1,7 @@
 import { Layout, CodeBlock } from '../../components'
 import { Box as Content, Box, Label, Input } from 'atomic-library-core'
 import { Btn, Alert } from 'mui-clone'
-import { HiUpload, Span } from 'react-icons/hi'
+import { HiUpload } from 'react-icons/hi'
 import { FiTrash2 } from 'react-icons/fi'
 const Result = ({ children, ...rest }) => {
   return (
