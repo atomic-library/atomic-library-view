@@ -466,13 +466,6 @@ astral-regex@^2.0.0:
   resolved "https://registry.npmjs.org/astral-regex/-/astral-regex-2.0.0.tgz"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-atomic-library-core@^1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/atomic-library-core/-/atomic-library-core-1.4.5.tgz#2b506a4ca273a4f80215065711b3e91c5c004ebc"
-  integrity sha512-UnKaIURn3jP5Mqdlu26f4pKesWY7NGu8YcCSDHfJVwtWfOzayx56PNCydmUVIFEWpPLmDaLX5oAwhshwil64DA==
-  dependencies:
-    styled-components "^5.3.3"
-
 atomic-library-core@^1.4.7:
   version "1.4.7"
   resolved "https://registry.yarnpkg.com/atomic-library-core/-/atomic-library-core-1.4.7.tgz#36a4eafa900b661814357a7ba799ba62020af63a"
@@ -1571,10 +1564,10 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-mui-clone@^1.4.6:
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/mui-clone/-/mui-clone-1.4.6.tgz#89a17a4324d15d5c3c8821d208aba36294a0b068"
-  integrity sha512-B7HIYIj/uCN6jZopmdUWyMmdZ2Km4b/wrQlE+YZA0IWIlgVSFrhu0t9G3o/CgNUHmLODPbL++7nWduEc6JbbXQ==
+mui-clone@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/mui-clone/-/mui-clone-1.5.0.tgz#c90da53a70d475713d8623f4f5dd377e3a7d4163"
+  integrity sha512-C4MfbIUYTHHvQWfwJstQPG2pG8HB+8efUHyrqLMJwH5qrncK4avAZThwAQ5NvsV9uATIhqvey+ZnLxXYWf/Z1w==
   dependencies:
     atomic-library-core "^1.4.7"
     react-icons "^4.3.1"

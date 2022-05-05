@@ -1,7 +1,8 @@
 import { Layout, CodeBlock } from '../../components'
 import { Box as Content, Box, Label, Input } from 'atomic-library-core'
-import { Btn, BtnGroup, Checkbox, Radio, RadioGroup, Range, Rating, Switch, ToggleBtnGroup } from 'mui-clone'
-
+import { Btn, Alert } from 'mui-clone'
+import { HiUpload, Span } from 'react-icons/hi'
+import { FiTrash2 } from 'react-icons/fi'
 const Result = ({ children, ...rest }) => {
   return (
     <Box rounded p='1rem' b='1px solid #ccc' {...rest}>
@@ -83,7 +84,38 @@ const MuiCloneInputs = () => {
           <Btn rounded size='md' type='ghost'>Medium</Btn>
           <Btn rounded size='lg' type='smooth'>Large</Btn>
         </Result>
+        <p>Change the rendered element using the prop <code>componente</code> </p>
+        <Alert type='smooth' myStyle={{ code: { bg: 'transparent' } }} fs='1rem' rounded>
+          <>Also, when using the prop <code>component</code>, you need to use capitalize, since the component uses atomic-library-core components</>
+        </Alert>
+        <p>For example:</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+import { Btn } from 'mui-clone'
+import { Input } from 'atomic-library-core'
 
+const UploadButton = () => {
+  return (
+    <Label>
+      <Input type='file' display='none' />
+      <Btn component='Span'>Upload</Btn>
+    </Label>
+  )
+}
+ 
+          `}
+        />
+        <Result>
+
+          <Label>
+            <Input type='file' d='none' />
+            <Btn component='Span' rounded subType='success'>Upload</Btn>
+          </Label>
+
+        </Result>
+
+        <Btn><Span mR='10px'><FiTrash2 /></Span> hola</Btn>
       </Content>
     </Layout>
   )

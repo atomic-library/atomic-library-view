@@ -55,7 +55,7 @@ const MuiCloneGettingStarted = () => {
         </ul>
         <br />
         <Alert subType='info' rounded type='smooth' fs='1rem'>
-          Note: if the component is an input, you can use inputType to set the type of the input
+          <>Note: if the component is an input, you can use inputType to set the type of the input</>
         </Alert>
         <br />
 
@@ -77,8 +77,9 @@ const MuiCloneGettingStarted = () => {
         <p>In the following tables i expose information about the components with the categories: component, status and description.</p>
         <p>If you want more information about the components you can go to the rest of the documentation </p>
         <Alert subType='info' rounded type='smooth' fs='1rem'>
-          Note: this is the first version of the package so the components are not perfect and some have missing functionalities
+          <>Note: this is the first version of the package so the components are not perfect and some have missing functionalities</>
         </Alert>
+
         <br />
         <h3>Inputs</h3>
         <table>
