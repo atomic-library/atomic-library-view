@@ -81,13 +81,16 @@ const MuiCloneGettingStarted = () => {
         </Alert>
 
         <br />
-        <h3>Inputs</h3>
         <table>
+          <tr>
+            <td colspan='3'><p><b>Inputs</b></p></td>
+          </tr>
           <tr>
             <th>component</th>
             <th>status</th>
             <th>description</th>
           </tr>
+
           <tr>
             <td>Autocomplete</td>
             <td>Not yet</td>
@@ -103,6 +106,17 @@ const MuiCloneGettingStarted = () => {
             <td>done</td>
             <td>this is the replacement for <code>Button</code> . This component return directly a <code>Button</code>  element from atomic-library-core</td>
           </tr>
+          <tr>
+            <td>IconButton</td>
+            <td>not necessary</td>
+            <td>instead use <code>Btn</code></td>
+          </tr>
+          <tr>
+            <td>LoadingButton</td>
+            <td>not necessary</td>
+            <td>instead use <code>Btn</code></td>
+          </tr>
+
           <tr>
             <td>ButtonGroup</td>
             <td>replaced</td>
@@ -263,7 +277,7 @@ const MuiCloneGettingStarted = () => {
             <td>Skeleton</td>
             <td>done</td>
             <td>this compoenent is Span element from atomic-library-core
-              with a default. you can use use any prop of Span element, but the main ones
+              with a default style. you can use any prop of Span element, but the main ones
               in this componet are height or h, with or w, borderRadius or br and background or bg.
               note: missing animation
             </td>
@@ -273,11 +287,9 @@ const MuiCloneGettingStarted = () => {
             <td>done</td>
             <td />
           </tr>
-        </table>
-
-        <h3>Surfaces</h3>
-
-        <table>
+          <tr>
+            <td colspan='3'><p><b>Surfaces</b></p></td>
+          </tr>
           <tr>
             <th>component</th>
             <th>status</th>
@@ -338,11 +350,7 @@ const MuiCloneGettingStarted = () => {
             <td>done</td>
             <td />
           </tr>
-          <tr>
-            <td>not yet</td>
-            <td />
-            <td />
-          </tr>
+
           <tr>
             <td>SpeedDial</td>
             <td>not yet</td>

@@ -6,6 +6,7 @@ import MuiCloneNavigation from './MuiCloneNavigation'
 import MuiCloneSurfaces from './MuiCloneSurfaces'
 import MuiCloneUtils from './MuiCloneUtils'
 import MuiCloneGettingStarted from './MuiCloneGettingStarted'
+import MuiCloneQuickDemo from './MuiCloneQuickDemo'
 export {
   MuiCloneDataDisplay,
   MuiCloneFeedback,
@@ -14,5 +15,6 @@ export {
   MuiCloneNavigation,
   MuiCloneSurfaces,
   MuiCloneUtils,
-  MuiCloneGettingStarted
+  MuiCloneGettingStarted,
+  MuiCloneQuickDemo
 }

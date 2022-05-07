@@ -49,7 +49,7 @@ const Dashboard = ({ children }) => {
           <NavLink exact onClick={() => setStateMui(!stateMui)} to='/dashboard/mui-clone' activeClassName='active'>Mui Clone</NavLink>
           <Collapse collapsed={stateMui}>
             <Box flex flowColumn flexWrap mL='1rem'>
-
+            <NavLink exact to='/dashboard/mui-clone/quick-demo' activeClassName='active'>Quick Demo</NavLink>
               <NavLink exact to='/dashboard/mui-clone/inputs' activeClassName='active'>Inputs</NavLink>
               <NavLink exact to='/dashboard/mui-clone/data-display' activeClassName='active'>Data display</NavLink>
               <NavLink exact to='/dashboard/mui-clone/feedback' activeClassName='active'>Feed back</NavLink>

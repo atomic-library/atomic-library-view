@@ -1,6 +1,6 @@
 import { Layout, CodeBlock } from '../../components'
 import { Box as Content, Box, Label, Input, Span } from 'atomic-library-core'
-import { Btn, Alert, Switch } from 'mui-clone'
+import { Btn, Alert, Switch, BtnGroup } from 'mui-clone'
 import { HiUpload } from 'react-icons/hi'
 import { FiTrash2 } from 'react-icons/fi'
 import { useState } from 'react'
@@ -44,10 +44,10 @@ const MuiCloneInputs = () => {
         <CodeBlock
           language='jsx'
           code={`
-<Btn rounded raised >Click here</Btn>
+<Btn raised>Click here</Btn>
 <Btn 
   type='none' 
-  fullRounded 
+  br="50px"
   c='#fff' 
   bg='#F9BA10' 
   bxSw='2px 3px 0px #E5AB0E'
@@ -58,35 +58,35 @@ const MuiCloneInputs = () => {
         />
         <Result>
           <Btn rounded raised>Click here</Btn>
-          <Btn type='none' c='#fff' fullRounded bg='#F9BA10' bxSw='2px 3px 0px #E5AB0E'>Click here</Btn>
+          <Btn type='none' c='#fff' br='50px' bg='#F9BA10' bxSw='2px 3px 0px #E5AB0E'>Click here</Btn>
         </Result>
         <p>You can also disable it</p>
         <CodeBlock
           language='jsx'
           code={`
-<Btn rounded disabled >Click here</Btn>
-<Btn rounded disabled type="ghost">Click here</Btn>
+<Btn disabled >Click here</Btn>
+<Btn disabled type="ghost">Click here</Btn>
           `}
         />
         <Result>
-          <Btn rounded disabled>Click here</Btn>
-          <Btn rounded disabled type='ghost'>Click here</Btn>
+          <Btn disabled>Click here</Btn>
+          <Btn disabled type='ghost'>Click here</Btn>
         </Result>
         <p>Sizes</p>
         <CodeBlock
           language='jsx'
           code={`
-<Btn rounded size="sm" >Small</Btn>
-<Btn rounded size="md" type="ghost">Medium</Btn>
-<Btn rounded size="lg" type="smooth">Large</Btn>
+<Btn size="sm" >Small</Btn>
+<Btn size="md" type="ghost">Medium</Btn>
+<Btn size="lg" type="smooth">Large</Btn>
           `}
         />
         <Result>
-          <Btn rounded size='sm'>Small</Btn>
-          <Btn rounded size='md' type='ghost'>Medium</Btn>
-          <Btn rounded size='lg' type='smooth'>Large</Btn>
+          <Btn size='sm'>Small</Btn>
+          <Btn size='md' type='ghost'>Medium</Btn>
+          <Btn size='lg' type='smooth'>Large</Btn>
         </Result>
-        <p>Change the rendered element using the prop <code>componente</code> </p>
+        <p>Change the rendered element using the prop <code>component</code></p>
         <Alert type='smooth' myStyle={{ code: { bg: 'transparent' } }} fs='1rem' rounded>
           <>Also, when using the prop <code>component</code>, you need to use capitalize, since the component uses atomic-library-core components</>
         </Alert>
@@ -187,6 +187,13 @@ const Buttons = () => {
           <Btn loading={loading}>fetch</Btn>
           <Btn loading={loading} loadingIndicator='loading...'>fetch</Btn>
         </Result>
+        <br />
+        <h3>BtnGroup: done</h3>
+        <BtnGroup>
+          <Btn> button 1</Btn>
+          <Btn> button 2</Btn>
+          <Btn> button 3</Btn>
+        </BtnGroup>
       </Content>
     </Layout>
   )

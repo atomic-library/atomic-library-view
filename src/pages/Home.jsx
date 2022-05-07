@@ -1,4 +1,4 @@
-import { Layout, CodeBlock } from '../components'
+import { Layout, CodeBlock, Result } from '../components'
 import cardEffect001 from '../assets/cardEffect001'
 import buttonEffect001 from '../assets/buttonEffect001'
 import buttonEffect002 from '../assets/buttonEffect002'
@@ -180,8 +180,7 @@ const Home = () => {
           but with the difference that each one returns a semantic tag
         </p>
         <CodeBlock language='jsx' code={coreContainersStr} />
-        <p>Result:</p>
-        <Box>
+        <Result>
           <Wrapper
             grid
             gap='10px'
@@ -202,7 +201,8 @@ const Home = () => {
             <Aside h='400px' bg='#CACACA' m='0' span='aside' />
             <Footer h='80px' bg='#ccc' span='footer' />
           </Wrapper>
-        </Box> <br />
+        </Result>
+        <br />
         <h3>myStyle and customizer</h3>
         <p>To style the components in addition to the style props like bg or background, h or height, c or color, etc,
           you can use the myStyle prop to modify any css property using camel-case or abbreviations
@@ -233,20 +233,23 @@ const MyComponent = () => {
 export default MyComponent
         `}
         />
-        <p>Result: </p>
-        <Box
-          myStyle={{
-            bg: '#ccc', // or background: '#ccc'
-            h: '200px', // or height: '200px'
-            br: '10px', // or borderRadius: '10px'
-            padding: '1rem', // or p: '1rem'
-            p: { // it refer to tag p
-              fs: '1.5rem' // or fontSize: '2rem'
-            }
-          }}
-        >
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, tempore.</p>
-        </Box> <br />
+        <Result>
+          <Box
+            myStyle={{
+              bg: '#ccc', // or background: '#ccc'
+              h: '200px', // or height: '200px'
+              br: '10px', // or borderRadius: '10px'
+              padding: '1rem', // or p: '1rem'
+              p: { // it refer to tag p
+                fs: '1.5rem' // or fontSize: '2rem'
+              }
+            }}
+          >
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, tempore.</p>
+          </Box>
+        </Result>
+
+        <br />
         <p>customizer is the function on which myStyle is based. you can use it to
           modify any property of your own styled-components.
         </p>
@@ -266,20 +269,22 @@ const Container = styled.div'
         /> <br />
         <h3>Style Functions</h3>
         <CodeBlock language='jsx' code={styleFunctionsStr} />
-        <p>Result: </p>
-        <Box grid gap='1rem'>
-          <Box
-            insertStyle={cardEffect1} p='1rem' rounded bg='#f2f2f2'
-          >
-            click here
+        <Result>
+          <Box grid gap='1rem'>
+            <Box
+              insertStyle={cardEffect1} p='1rem' rounded bg='#f2f2f2'
+            >
+              click here
+            </Box>
+            <Box
+              insertStyle={cardEffect2}
+              myStyle={{ p: '1rem', bg: '#f2f2f2' }}
+              rounded
+            >click here
+            </Box>
           </Box>
-          <Box
-            insertStyle={cardEffect2}
-            myStyle={{ p: '1rem', bg: '#f2f2f2' }}
-            rounded
-          >click here
-          </Box>
-        </Box> <br />
+        </Result>
+        <br />
         <h3>Style Effects</h3>
         <CodeBlock
           language='jsx' code={`
@@ -316,14 +321,16 @@ const MyComponent = () => {
 }
 `}
         />
-        <p>Result: </p>
-        <Box rounded b='1px solid #ccc' insertStyle={buttonEffect1}>
-          <p className='effect-content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,</p>
-        </Box>
-        <Box p='1rem' b='1px solid #ccc' mT='1rem' rounded insertStyle={buttonEffect2}>
-          <span className='effect-content'>click here</span>
-        </Box>
-        <br /> <br />
+        <Result>
+          <Box rounded b='1px solid #ccc' insertStyle={buttonEffect1}>
+            <p className='effect-content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,</p>
+          </Box>
+          <Box p='1rem' b='1px solid #ccc' mT='1rem' rounded insertStyle={buttonEffect2}>
+            <span className='effect-content'>click here</span>
+          </Box>
+        </Result>
+
+        <br />
         <h3>Extending Styles</h3>
         <p>You can modify the style of a component which return a style-component for example:
           Box
@@ -361,18 +368,20 @@ const MyComponent = () => {
 }
         `}
         />
-        <p>Result: </p> <br />
-        <Box2 effect1>
-          <p className='effect-content'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-          </p>
-        </Box2>
-        <Box2 m='1rem 0' effect2={{ when: 'active' }}>
-          <p className='effect-content'>click here</p>
-        </Box2>
-        <Box2>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </Box2>
+        <Result>
+          <Box2 effect1>
+            <p className='effect-content'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+            </p>
+          </Box2>
+          <Box2 m='1rem 0' effect2={{ when: 'active' }}>
+            <p className='effect-content'>click here</p>
+          </Box2>
+          <Box2>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </Box2>
+        </Result>
+
       </Content>
     </Layout>
   )

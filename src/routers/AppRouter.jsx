@@ -24,7 +24,8 @@ import {
   MuiCloneNavigation,
   MuiCloneSurfaces,
   MuiCloneUtils,
-  MuiCloneGettingStarted
+  MuiCloneGettingStarted,
+  MuiCloneQuickDemo
 } from '../pages/mui-clone'
 const AppRouter = () => {
   return (
@@ -39,6 +40,7 @@ const AppRouter = () => {
           <Route path='my-system' element={<MySystem />} />
           <Route path='mui-clone'>
             <Route index element={<MuiCloneGettingStarted />} />
+            <Route path='quick-demo' element={<MuiCloneQuickDemo />} />
             <Route path='inputs' element={<MuiCloneInputs />} />
             <Route path='data-display' element={<MuiCloneDataDisplay />} />
             <Route path='feedback' element={<MuiCloneFeedback />} />
