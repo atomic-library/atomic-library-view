@@ -212,6 +212,7 @@ const MuiCloneQuickDemo = () => {
 <Avatar>Dg</Avatar>
 <Avatar src='https://exampleUrl.com/image' alt='Profile' />
 <Avatar src='https://exampleUrl.com/broke' alt='Profile' />
+<Avatar src='https://exampleUrl.com/broke' />
 <Avatar bg='orange' h='60px' w='60px' />
 <AvatarGroup max='4' childrenStyle={{ w: '50px', h: '50px' }}>
   <Avatar />
