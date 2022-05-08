@@ -95,7 +95,7 @@ const MuiCloneInputs = () => {
           language='jsx'
           code={`
 import { Btn } from 'mui-clone'
-import { Input } from 'atomic-library-core'
+import { Input, Label } from 'atomic-library-core'
 
 const UploadButton = () => {
   return (

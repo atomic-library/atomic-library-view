@@ -171,6 +171,23 @@ const MuiCloneQuickDemo = () => {
         </Result>
 
         <h3>Range: in process</h3>
+        <CodeBlock
+          language='jsx'
+          code={`
+<Range /> <br />
+<Range subType="success"/> <br />
+<Range subType="warning"/> <br />
+<Range min={-10} max={90} step={10}/> <br />
+<Range min={-10} max={90} step={10} marks/>
+          `}
+        />
+        <Result>
+          <Range /> <br />
+          <Range subType='success' /> <br />
+          <Range subType='warning' /> <br />
+          <Range min={-10} max={90} step={10} /> <br />
+          <Range min={-10} max={90} step={10} marks />
+        </Result>
         <h3>Switch: done</h3>
         <CodeBlock
           language='jsx'
@@ -187,8 +204,40 @@ const MuiCloneQuickDemo = () => {
           <Switch subType='dark' flowColumnReverse>Dark</Switch>
           <Switch subType='dark' flowColumnReverse defaultChecked>Dark</Switch>
         </Result>
-        <h3>Avatar: done</h3>
-        <h3>AvatarGroup: done</h3>
+        <h3>Avatar: done // AvatarGroup: done</h3>
+        <CodeBlock
+          language='jsx'
+          code={`
+<Avatar />
+<Avatar>Dg</Avatar>
+<Avatar src='https://exampleUrl.com/image' alt='Profile' />
+<Avatar src='https://exampleUrl.com/broke' alt='Profile' />
+<Avatar bg='orange' h='60px' w='60px' />
+<AvatarGroup max='4' childrenStyle={{ w: '50px', h: '50px' }}>
+  <Avatar />
+  <Avatar />
+  <Avatar />
+  <Avatar />
+  <Avatar />
+</AvatarGroup>
+          `}
+        />
+        <Result>
+          <Avatar />
+          <Avatar>Dg</Avatar>
+          <Avatar src='https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Profile' />
+          <Avatar src='https://exampleUrl.com/broke' alt='Profile' />
+          <Avatar src='https://exampleUrl.com/broke' />
+          <Avatar bg='orange' h='60px' w='60px' />
+          <AvatarGroup max='4' childrenStyle={{ w: '50px', h: '50px' }}>
+            <Avatar />
+            <Avatar />
+            <Avatar />
+            <Avatar />
+            <Avatar />
+          </AvatarGroup>
+        </Result>
+
         <h3>Badge: done</h3>
         <h3>Chip: done</h3>
         <h3>ContentItem: done</h3>

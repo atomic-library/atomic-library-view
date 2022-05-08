@@ -1564,10 +1564,10 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-mui-clone@^1.6.7:
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/mui-clone/-/mui-clone-1.6.7.tgz#2ddba025474cafe6c99cfe264dcf9f409a3914e1"
-  integrity sha512-n1+CFLtHmH7pmDrGzdi9M0/LHUQOXMG9btCqJNxoD9E4tLdMoKgBLc/IXtAVQvNNgQnDpq1YcRH1Ky8Qk6wrqQ==
+mui-clone@^1.6.8:
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/mui-clone/-/mui-clone-1.6.8.tgz#19ff79e6e22177fc8ae4764d39502d0233dd6c1d"
+  integrity sha512-2WdHXjoBAh0rmas2reOVEP1y/y7JiqhASNv8YlqiCjjFugjZ2DG78M/DrSMxMRqFVQplzeG8lCqcHJ9ZmDMFzA==
   dependencies:
     atomic-library-core "^1.5.3"
     react-icons "^4.3.1"
