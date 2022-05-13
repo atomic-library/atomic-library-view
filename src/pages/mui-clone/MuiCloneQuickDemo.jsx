@@ -386,19 +386,19 @@ Lorem ipsum dolor sit amet.
       ${BACKDROPCLASSESEND}
     }
   >
-  <Box className='image'><img src='https://exampleUrl.com/' /></Box>
-  <Box className='content'>
-    <ContentItem
-      c='#676767'
-      display={<Avatar />}
-      title='Anton Luk'
-      content='photo taken by Anton Luk'
-      bBm='1px solid #EDEDED'
-      onClose={() => setOpen(false)}
-    />
-    <Box className='comments'>Click outside...</Box>
+    <Box className='image'><img src='https://exampleUrl.com/' /></Box>
+    <Box className='content'>
+      <ContentItem
+        c='#676767'
+        display={<Avatar />}
+        title='Anton Luk'
+        content='photo taken by Anton Luk'
+        bBm='1px solid #EDEDED'
+        onClose={() => setOpen(false)}
+      />
+      <Box className='comments'>Click outside...</Box>
+    </Box>
   </Box>
-</Box>
   {/* -------------- */}
 </Backdrop>
           `}
