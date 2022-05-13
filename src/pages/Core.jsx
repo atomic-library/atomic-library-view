@@ -273,7 +273,7 @@ const Component = () => {
           <li>rounded</li>
           <li>fullRounded</li>
           <li>size</li>
-          <li>raised</li>
+          <li>shading</li>
           <li>gradient</li>
           <li>variants</li>
           <li>myStyle</li>

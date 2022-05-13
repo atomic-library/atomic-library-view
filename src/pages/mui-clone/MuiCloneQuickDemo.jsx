@@ -1,6 +1,8 @@
 import { Layout, CodeBlock, Result } from '../../components'
 import { Box as Content, Box, Label, Input, Span } from 'atomic-library-core'
 import { useState } from 'react'
+import { BiBell } from 'react-icons/bi'
+import { FiMail } from 'react-icons/fi'
 import {
   Btn,
   BtnGroup,
@@ -27,6 +29,7 @@ import {
 
 const MuiCloneQuickDemo = () => {
   const [radioValue, setRadioValue] = useState('')
+  const [open, setOpen] = useState(false)
   return (
     <Layout>
       <Content size='md' p='50px 30px'>
@@ -240,11 +243,180 @@ const MuiCloneQuickDemo = () => {
         </Result>
 
         <h3>Badge: done</h3>
+        <CodeBlock
+          language='jsx'
+          code={`
+<Box flex gap='20px'>
+  <Badge badgeNumber={3}>
+    <BiBell fontSize='1.5rem' />
+  </Badge>
+  <Badge badgeNumber={3} subType='success'>
+    <BiBell fontSize='1.5rem' />
+  </Badge>
+  <Badge badgeNumber={100}>
+    <BiBell fontSize='1.5rem' />
+  </Badge>
+  <Badge badgeContent={<BiBell fontSize='1rem' />}>
+    <FiMail fontSize='1.5rem' />
+  </Badge>
+  <Badge vertical='bottom' badgeContent={<BiBell fontSize='1rem' />}>
+    <FiMail fontSize='1.5rem' />
+  </Badge>
+  <Badge horizontal='left' badgeNumber={100}>
+    <BiBell fontSize='1.5rem' />
+  </Badge>
+  <Badge badgeContent=' ' dot>
+    <BiBell fontSize='1.5rem' />
+  </Badge>
+</Box>
+          `}
+        />
+        <Result>
+          <Box flex gap='20px'>
+
+            <Badge badgeNumber={3}>
+              <BiBell fontSize='1.5rem' />
+            </Badge>
+            <Badge badgeNumber={100} subType='success'>
+              <BiBell fontSize='1.5rem' />
+            </Badge>
+            <Badge badgeContent={<BiBell fontSize='1rem' />}>
+              <FiMail fontSize='1.5rem' />
+            </Badge>
+            <Badge vertical='bottom' badgeContent={<BiBell fontSize='1rem' />}>
+              <FiMail fontSize='1.5rem' />
+            </Badge>
+            <Badge horizontal='left' badgeNumber={100}>
+              <BiBell fontSize='1.5rem' />
+            </Badge>
+            <Badge badgeContent=' ' dot>
+              <BiBell fontSize='1.5rem' />
+            </Badge>
+          </Box>
+
+        </Result>
         <h3>Chip: done</h3>
+        <CodeBlock
+          language='jsx'
+          code={`
+<Box flex gap='10px' center>
+  <Chip>hola</Chip>
+  <Chip onClose={() => {}}>hola</Chip>
+  <Chip display={<Avatar h='20px' w='20px' />}>Profile</Chip>
+  <Chip subType='success'>hola</Chip>
+  <Chip subType='danger' type='filled' onClose={() => {}}>hola</Chip>
+</Box>
+          `}
+        />
+        <Result>
+          <Box flex gap='10px' center>
+            <Chip>hola</Chip>
+            <Chip onClose={() => {}}>hola</Chip>
+            <Chip display={<Avatar h='20px' w='20px' />}>Profile</Chip>
+            <Chip subType='success'>hola</Chip>
+            <Chip subType='danger' type='filled' onClose={() => {}}>hola</Chip>
+          </Box>
+
+        </Result>
         <h3>ContentItem: done</h3>
+        <CodeBlock
+          language='jsx'
+          code={`
+<Alert>this is a default Alert </Alert>
+<Alert type='ghost'> this is a default Alert </Alert>
+<Alert type='ghost' subType='warning' fullRounded>
+  this is a default Alert
+</Alert>
+<Alert type='smooth' subType='danger' rounded onClose={() => {}}>
+  this is a default Alert
+</Alert>
+          `}
+        />
+        <Result>
+          <Alert>this is a default Alert </Alert>
+          <Alert type='ghost'> Lorem ipsum dolor sit amet.</Alert>
+          <Alert type='ghost' subType='warning' fullRounded>
+            Lorem ipsum dolor sit amet.
+          </Alert>
+          <Alert type='smooth' subType='danger' rounded onClose={() => {}}>
+            Lorem ipsum dolor sit amet.
+          </Alert>
+        </Result>
         <h3>List: done</h3>
         <h3>Alert: done</h3>
+        <CodeBlock
+          language='jsx'
+          code={`
+<ContentItem
+  display={<Avatar />}
+  title='Anton Luk'
+  content='photo taken by Anton Luk'
+  rounded
+  onClose={someFunction}
+/>
+          `}
+        />
+        <Result>
+          <ContentItem
+            display={<Avatar />}
+            title='Anton Luk'
+            content='photo taken by Anton Luk'
+            rounded
+            onClose={() => {}}
+          />
+        </Result>
         <h3>Backdrop: done</h3>
+        <CodeBlock
+          language='jsx'
+          code={`
+<Btn onClick={() => setOpen(true)}>Open</Btn>
+
+<Backdrop z='1000' open={open} onClick={() => setOpen(false)}>
+  <Box grid w='70vw' bg='#fff' rounded>
+    <Box h='100%'>
+      <img width='100%' height='100%' src='https://exampleUrl.com/image' />
+    </Box>
+    <Box h='100%' flex flowColumn jc='space-between'>
+      <ContentItem
+        c='#676767'
+        display={<Avatar />}
+        title='Anton Luk'
+        content='photo taken by Anton Luk'
+        bBm='1px solid #EDEDED'
+        m='0'
+      />
+      <Box fs='1rem' m='0' p='1.25rem' bT='1px solid #EDEDED'>
+         Click outside...
+      </Box>
+    </Box>
+  </Box>
+</Backdrop>
+          `}
+        />
+        <Result>
+          <Btn onClick={() => setOpen(true)}>Open</Btn>
+          <Backdrop z='1000' open={open} onClick={() => setOpen(false)}>
+            <Box grid w='70vw' bg='#fff' rounded>
+              <Box h='100%'>
+                <img width='100%' height='100%' src='https://images.unsplash.com/photo-1652339710187-ac698792edcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80' alt='' />
+              </Box>
+              <Box h='100%' flex flowColumn jc='space-between'>
+                <ContentItem
+                  c='#676767'
+                  display={<Avatar />}
+                  title='Anton Luk'
+                  content='photo taken by Anton Luk'
+                  bBm='1px solid #EDEDED'
+                  m='0'
+                />
+                <Box fs='1rem' m='0' p='1.25rem' bT='1px solid #EDEDED'>
+                  Click outside...
+                </Box>
+              </Box>
+            </Box>
+          </Backdrop>
+
+        </Result>
         <h3>Skeleton: done</h3>
         <CodeBlock
           language='jsx'
@@ -281,6 +453,7 @@ const MuiCloneQuickDemo = () => {
         <h3>Accordion: done</h3>
         <h3>Navbar: done</h3>
         <h3>Link: done</h3>
+
         <h3>Collapse: done</h3>
         <h3>Slider: done</h3>
       </Content>

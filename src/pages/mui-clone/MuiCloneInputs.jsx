@@ -57,7 +57,8 @@ const MuiCloneInputs = () => {
           `}
         />
         <Result>
-          <Btn rounded raised>Click here</Btn>
+
+          <Btn rounded shading>Click here</Btn>
           <Btn type='none' c='#fff' br='50px' bg='#F9BA10' bxSw='2px 3px 0px #E5AB0E'>Click here</Btn>
         </Result>
         <p>You can also disable it</p>
