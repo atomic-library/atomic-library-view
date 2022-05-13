@@ -323,12 +323,12 @@ const MuiCloneQuickDemo = () => {
           language='jsx'
           code={`
 <Alert>this is a default Alert </Alert>
-<Alert type='ghost'> this is a default Alert </Alert>
+<Alert type='ghost'> Lorem ipsum dolor sit amet.</Alert>
 <Alert type='ghost' subType='warning' fullRounded>
-  this is a default Alert
+Lorem ipsum dolor sit amet.
 </Alert>
 <Alert type='smooth' subType='danger' rounded onClose={() => {}}>
-  this is a default Alert
+  Lorem ipsum dolor sit amet.
 </Alert>
           `}
         />
@@ -372,6 +372,7 @@ const MuiCloneQuickDemo = () => {
 <Btn onClick={() => setOpen(true)}>Open</Btn>
 
 <Backdrop z='1000' open={open} onClick={() => setOpen(false)}>
+    
   <Box grid w='70vw' bg='#fff' rounded>
     <Box h='100%'>
       <img width='100%' height='100%' src='https://exampleUrl.com/image' />
@@ -389,6 +390,7 @@ const MuiCloneQuickDemo = () => {
          Click outside...
       </Box>
     </Box>
+
   </Box>
 </Backdrop>
           `}
