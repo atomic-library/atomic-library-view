@@ -385,6 +385,7 @@ Lorem ipsum dolor sit amet.
         content='photo taken by Anton Luk'
         bBm='1px solid #EDEDED'
         m='0'
+        onClose={() => setOpen(false)}
       />
       <Box fs='1rem' m='0' p='1.25rem' bT='1px solid #EDEDED'>
          Click outside...
@@ -410,6 +411,7 @@ Lorem ipsum dolor sit amet.
                   content='photo taken by Anton Luk'
                   bBm='1px solid #EDEDED'
                   m='0'
+                  onClose={() => setOpen(false)}
                 />
                 <Box fs='1rem' m='0' p='1.25rem' bT='1px solid #EDEDED'>
                   Click outside...
