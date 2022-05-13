@@ -372,7 +372,7 @@ Lorem ipsum dolor sit amet.
 <Btn onClick={() => setOpen(true)}>Open</Btn>
 
 <Backdrop z='1000' open={open} onClick={() => setOpen(false)}>
-    
+  //content of Backdrop
   <Box grid w='70vw' bg='#fff' rounded>
     <Box h='100%'>
       <img width='100%' height='100%' src='https://exampleUrl.com/image' />
@@ -390,8 +390,8 @@ Lorem ipsum dolor sit amet.
          Click outside...
       </Box>
     </Box>
-
   </Box>
+  //----------
 </Backdrop>
           `}
         />
