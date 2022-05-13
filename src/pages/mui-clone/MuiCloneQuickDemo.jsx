@@ -318,7 +318,7 @@ const MuiCloneQuickDemo = () => {
           </Box>
 
         </Result>
-        <h3>ContentItem: done</h3>
+        <h3>Alert: done</h3>
         <CodeBlock
           language='jsx'
           code={`
@@ -343,7 +343,7 @@ const MuiCloneQuickDemo = () => {
           </Alert>
         </Result>
         <h3>List: done</h3>
-        <h3>Alert: done</h3>
+        <h3>ContentItem: done</h3>
         <CodeBlock
           language='jsx'
           code={`
