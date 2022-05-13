@@ -4,6 +4,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 import AppBar from './AppBar'
 import { Collapse } from 'mui-clone'
 import { useState } from 'react'
+import { IoIosArrowDown } from 'react-icons/io'
 // -----------------------STYLE--------------------------//
 
 const menuStyle = {
@@ -46,10 +47,10 @@ const Dashboard = ({ children }) => {
           <NavLink exact to='/dashboard/hooks' activeClassName='active'>Hooks</NavLink>
           <NavLink exact to='/dashboard/style' activeClassName='active'>Style</NavLink>
           <NavLink exact to='/dashboard/my-system' activeClassName='active'>My System</NavLink>
-          <NavLink exact onClick={() => setStateMui(!stateMui)} to='/dashboard/mui-clone' activeClassName='active'>Mui Clone</NavLink>
+          <NavLink exact onClick={() => setStateMui(!stateMui)} to='/dashboard/mui-clone' activeClassName='active'>Mui Clone <IoIosArrowDown style={{ marginLeft: '10px' }} /></NavLink>
           <Collapse collapsed={stateMui}>
             <Box flex flowColumn flexWrap mL='1rem'>
-            <NavLink exact to='/dashboard/mui-clone/quick-demo' activeClassName='active'>Quick Demo</NavLink>
+              <NavLink exact to='/dashboard/mui-clone/quick-demo' activeClassName='active'>Quick Demo</NavLink>
               <NavLink exact to='/dashboard/mui-clone/inputs' activeClassName='active'>Inputs</NavLink>
               <NavLink exact to='/dashboard/mui-clone/data-display' activeClassName='active'>Data display</NavLink>
               <NavLink exact to='/dashboard/mui-clone/feedback' activeClassName='active'>Feed back</NavLink>
