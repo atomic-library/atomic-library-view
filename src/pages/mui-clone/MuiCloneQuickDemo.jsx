@@ -26,7 +26,8 @@ import {
   Collapse,
   Slider
 } from 'mui-clone'
-
+const BACKDROPCLASSES = '`w:70vw bg:#fff br:10px of:hidden'
+const BACKDROPCLASSESEND = '.comments{fs:1rem;m:0;p:1.5rem;b-t:1px/ssolid/s#EDEDED}`'
 const MuiCloneQuickDemo = () => {
   const [radioValue, setRadioValue] = useState('')
   const [open, setOpen] = useState(false)
@@ -366,58 +367,75 @@ Lorem ipsum dolor sit amet.
           />
         </Result>
         <h3>Backdrop: done</h3>
+
         <CodeBlock
           language='jsx'
           code={`
 <Btn onClick={() => setOpen(true)}>Open</Btn>
 
 <Backdrop z='1000' open={open} onClick={() => setOpen(false)}>
-  //content of Backdrop
-  <Box grid w='70vw' bg='#fff' rounded>
-    <Box h='100%'>
-      <img width='100%' height='100%' src='https://exampleUrl.com/image' />
-    </Box>
-    <Box h='100%' flex flowColumn jc='space-between'>
-      <ContentItem
-        c='#676767'
-        display={<Avatar />}
-        title='Anton Luk'
-        content='photo taken by Anton Luk'
-        bBm='1px solid #EDEDED'
-        m='0'
-        onClose={() => setOpen(false)}
-      />
-      <Box fs='1rem' m='0' p='1.25rem' bT='1px solid #EDEDED'>
-         Click outside...
-      </Box>
-    </Box>
+  {/* content of Backdrop */}
+  <Box
+    shading={5}
+    grid
+    atomicClass={
+      ${BACKDROPCLASSES}
+      .image{h:100%;br:10px;of:hidden}
+      .image>img{h:100%;w:100%}
+      .content{h:100%;d:flex;jc:space-between;fx-dit:column}
+      ${BACKDROPCLASSESEND}
+    }
+  >
+  <Box className='image'><img src='https://exampleUrl.com/' /></Box>
+  <Box className='content'>
+    <ContentItem
+      c='#676767'
+      display={<Avatar />}
+      title='Anton Luk'
+      content='photo taken by Anton Luk'
+      bBm='1px solid #EDEDED'
+      onClose={() => setOpen(false)}
+    />
+    <Box className='comments'>Click outside...</Box>
   </Box>
-  //----------
+</Box>
+  {/* -------------- */}
 </Backdrop>
           `}
         />
         <Result>
           <Btn onClick={() => setOpen(true)}>Open</Btn>
           <Backdrop z='1000' open={open} onClick={() => setOpen(false)}>
-            <Box grid w='70vw' bg='#fff' rounded>
-              <Box h='100%'>
-                <img width='100%' height='100%' src='https://images.unsplash.com/photo-1652339710187-ac698792edcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80' alt='' />
+            {/* content of backdrop */}
+            <Box
+              shading={5}
+              grid
+              atomicClass={`
+                w:70vw bg:#fff br:10px of:hidden
+                .image{h:100%;br:10px;of:hidden}
+                .image>img{h:100%;w:100%}
+                .content{h:100%;d:flex;jc:space-between;fx-dit:column}
+                .comments{fs:1rem;m:0;p:1.5rem;b-t:1px/ssolid/s#EDEDED}
+              `}
+            >
+              <Box className='image'>
+                <img src='https://images.unsplash.com/photo-1652339710187-ac698792edcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80' alt='' />
               </Box>
-              <Box h='100%' flex flowColumn jc='space-between'>
+              <Box className='content'>
                 <ContentItem
                   c='#676767'
                   display={<Avatar />}
                   title='Anton Luk'
                   content='photo taken by Anton Luk'
                   bBm='1px solid #EDEDED'
-                  m='0'
                   onClose={() => setOpen(false)}
                 />
-                <Box fs='1rem' m='0' p='1.25rem' bT='1px solid #EDEDED'>
+                <Box className='comments'>
                   Click outside...
                 </Box>
               </Box>
             </Box>
+            {/* ------------- */}
           </Backdrop>
 
         </Result>
