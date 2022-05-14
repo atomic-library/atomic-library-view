@@ -27,7 +27,7 @@ import {
   Slider
 } from 'mui-clone'
 const BACKDROPCLASSES = '`w:70vw bg:#fff br:10px of:hidden'
-const BACKDROPCLASSESEND = '.comments{fs:1rem;m:0;p:1.5rem;b-t:1px/ssolid/s#EDEDED}`'
+const BACKDROPCLASSESEND = '.comments{fs:1rem;m:0;p:1.5rem;bT:1px/ssolid/s#EDEDED}`'
 const MuiCloneQuickDemo = () => {
   const [radioValue, setRadioValue] = useState('')
   const [open, setOpen] = useState(false)
@@ -380,9 +380,9 @@ Lorem ipsum dolor sit amet.
     grid
     atomicClass={
       ${BACKDROPCLASSES}
-      .image{h:100%;br:10px;of:hidden}
+      .image{h:100%;br:10px}
       .image>img{h:100%;w:100%}
-      .content{h:100%;d:flex;jc:space-between;fx-dit:column}
+      .content{h:100%;d:flex;jc:space-between;fxDit:column}
       ${BACKDROPCLASSESEND}
     }
   >
@@ -412,10 +412,10 @@ Lorem ipsum dolor sit amet.
               grid
               atomicClass={`
                 w:70vw bg:#fff br:10px of:hidden
-                .image{h:100%;br:10px;of:hidden}
+                .image{h:100%;br:10px}
                 .image>img{h:100%;w:100%}
-                .content{h:100%;d:flex;jc:space-between;fx-dit:column}
-                .comments{fs:1rem;m:0;p:1.5rem;b-t:1px/ssolid/s#EDEDED}
+                .content{h:100%;d:flex;jc:space-between;fxDit:column}
+                .comments{fs:1rem;m:0;p:1.5rem;bT:1px/ssolid/s#EDEDED}
               `}
             >
               <Box className='image'>

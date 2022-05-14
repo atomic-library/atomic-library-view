@@ -473,6 +473,13 @@ atomic-library-core@^1.5.7:
   dependencies:
     styled-components "^5.3.3"
 
+atomic-library-core@^1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/atomic-library-core/-/atomic-library-core-1.5.9.tgz#114f6e1fc6162b7806792db3811dec0399b3e504"
+  integrity sha512-kkalOgeGFiDz8FqzhKFDEgvkJPGxAPmgRpYEZsXWrQLp5lMwHnqiJby6k7dfJDQ664T5l+LwKlWsKzocIqeTbg==
+  dependencies:
+    styled-components "^5.3.3"
+
 "babel-plugin-styled-components@>= 1.12.0":
   version "2.0.6"
   resolved "https://registry.npmjs.org/babel-plugin-styled-components/-/babel-plugin-styled-components-2.0.6.tgz"
