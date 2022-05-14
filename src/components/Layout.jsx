@@ -10,7 +10,11 @@ const styleMain = {
   '::-webkit-scrollbar': { w: '8px' },
   '::-webkit-scrollbar-thumb': {
     bg: '#ccc', br: '10px'
-  }
+  },
+  break: {lg:{
+    w: '100%', 
+    l: '0'
+  }}
 }
 const Layout = ({ children }) => <Main myStyle={styleMain}> {children}</Main>
 

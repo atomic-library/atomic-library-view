@@ -1,8 +1,9 @@
-import { Nav } from 'atomic-library-core'
+import { Nav, Span } from 'atomic-library-core'
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
+import { AiOutlineMenu } from 'react-icons/ai'
 
-const AppBar = () => {
+const AppBar = ({ onClickMenu }) => {
   return (
     <Navbar
       position='fixed'
@@ -16,6 +17,8 @@ const AppBar = () => {
       <Link className='link-title' to='/'>Atomic library</Link>
       <Nav>
         <Link to='/dashboard/home'>Documentation</Link>
+        <Span onClick={onClickMenu} myStyle={{ d: 'none', break: { lg: { d: 'inline' } } }}><AiOutlineMenu /></Span>
+
         {/* <Link to='/dashboard/Forum'>Forum</Link>
         <Link to='/dashboard/join'>Join</Link> */}
       </Nav>

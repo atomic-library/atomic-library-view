@@ -5,6 +5,7 @@ import AppBar from './AppBar'
 import { Collapse } from 'mui-clone'
 import { useState } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
+import { AiOutlineMenu } from 'react-icons/ai'
 // -----------------------STYLE--------------------------//
 
 const menuStyle = {
@@ -30,16 +31,18 @@ const menuStyle = {
   '::-webkit-scrollbar-track': {
     m: '0 0 50px 0'
   }
+
 }
 // ---------------------END-STYLE--------------------------//
 
 const Dashboard = ({ children }) => {
   const [stateMui, setStateMui] = useState(true)
+  const [open, setOpen] = useState(true)
   return (
     <>
-      <AppBar />
+      <AppBar onClickMenu={() => setOpen(!open)} />
       {/* lateral menu */}
-      <Navbar location='left' position='fixed' myStyle={menuStyle}>
+      <Navbar location='left' position='fixed' myStyle={{ ...menuStyle, break: { lg: { l: !open && '-100%', tt: 'left .5s' } } }}>
         <Nav flex flexWrap flowColumn>
           <NavLink exact to='/dashboard/home' activeClassName='active'>Home</NavLink>
           <NavLink exact to='/dashboard/core' activeClassName='active'>Core</NavLink>
