@@ -26,8 +26,9 @@ import {
   Collapse,
   Slider
 } from 'mui-clone'
-const BACKDROPCLASSES = '`w:70vw bg:#fff br:10px of:hidden'
-const BACKDROPCLASSESEND = '.comments{fs:1rem;m:0;p:1.5rem;bT:1px/ssolid/s#EDEDED}`'
+const BACKDROPCLASSES = '`w:70vw  mxH:90vh bg:#fff br:10px of:hidden'
+const BACKDROPCLASSESEND =
+  '.comments{fs:1rem;m:0;p:1.5rem;bT:1px/ssolid/s#EDEDED}`'
 const MuiCloneQuickDemo = () => {
   const [radioValue, setRadioValue] = useState('')
   const [open, setOpen] = useState(false)
@@ -106,7 +107,6 @@ const MuiCloneQuickDemo = () => {
             <Btn>Click here</Btn>
             <Btn>Click here</Btn>
           </BtnGroup>
-
         </Result>
         <h3>Checkbox: done</h3>
         <CodeBlock
@@ -171,7 +171,6 @@ const MuiCloneQuickDemo = () => {
             <Radio value='label 1' label='label 1' />
             <Radio value='label 2'>label 2</Radio>
           </RadioGroup>
-
         </Result>
 
         <h3>Range: in process</h3>
@@ -205,8 +204,12 @@ const MuiCloneQuickDemo = () => {
         <Result>
           <Switch />
           <Switch subType='danger' label='hola' />
-          <Switch subType='dark' flowColumnReverse>Dark</Switch>
-          <Switch subType='dark' flowColumnReverse defaultChecked>Dark</Switch>
+          <Switch subType='dark' flowColumnReverse>
+            Dark
+          </Switch>
+          <Switch subType='dark' flowColumnReverse defaultChecked>
+            Dark
+          </Switch>
         </Result>
         <h3>Avatar: done // AvatarGroup: done</h3>
         <CodeBlock
@@ -230,7 +233,10 @@ const MuiCloneQuickDemo = () => {
         <Result>
           <Avatar />
           <Avatar>Dg</Avatar>
-          <Avatar src='https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Profile' />
+          <Avatar
+            src='https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            alt='Profile'
+          />
           <Avatar src='https://exampleUrl.com/broke' alt='Profile' />
           <Avatar src='https://exampleUrl.com/broke' />
           <Avatar bg='orange' h='60px' w='60px' />
@@ -274,7 +280,6 @@ const MuiCloneQuickDemo = () => {
         />
         <Result>
           <Box flex gap='20px'>
-
             <Badge badgeNumber={3}>
               <BiBell fontSize='1.5rem' />
             </Badge>
@@ -294,7 +299,6 @@ const MuiCloneQuickDemo = () => {
               <BiBell fontSize='1.5rem' />
             </Badge>
           </Box>
-
         </Result>
         <h3>Chip: done</h3>
         <CodeBlock
@@ -310,14 +314,15 @@ const MuiCloneQuickDemo = () => {
           `}
         />
         <Result>
-          <Box flex gap='10px' center>
+          <Box flex gap='10px' flexWrap center>
             <Chip>hola</Chip>
             <Chip onClose={() => {}}>hola</Chip>
             <Chip display={<Avatar h='20px' w='20px' />}>Profile</Chip>
             <Chip subType='success'>hola</Chip>
-            <Chip subType='danger' type='filled' onClose={() => {}}>hola</Chip>
+            <Chip subType='danger' type='filled' onClose={() => {}}>
+              hola
+            </Chip>
           </Box>
-
         </Result>
         <h3>Alert: done</h3>
         <CodeBlock
@@ -381,12 +386,26 @@ Lorem ipsum dolor sit amet.
     atomicClass={
       ${BACKDROPCLASSES}
       .image{h:100%;br:10px}
-      .image>img{h:100%;w:100%}
+      .image2{d:none;h:70vh;bg:#141414}
+      .image2>img{h:100%;w:100%;objectFit:contain}
+      .image>img{h:100%;w:100%;}
       .content{h:100%;d:flex;jc:space-between;fxDit:column}
       ${BACKDROPCLASSESEND}
     }
+    myStyle={{
+      break: {
+        lg: { w: '90vw' },
+        md: {
+          '.image': { d: 'none' },
+          '.content': { span: 'span 2' },
+          '.image2': { d: 'block' }
+        }
+      }
+    }}
   >
-    <Box className='image'><img src='https://exampleUrl.com/' /></Box>
+    <Box className='image'>
+      <img src='https://exampleUrl.com/image' />
+    </Box>
     <Box className='content'>
       <ContentItem
         c='#676767'
@@ -396,6 +415,9 @@ Lorem ipsum dolor sit amet.
         bBm='1px solid #EDEDED'
         onClose={() => setOpen(false)}
       />
+      <Box className='image2'>
+        <img src='https://exampleUrl.com/image'/>
+      </Box>
       <Box className='comments'>Click outside...</Box>
     </Box>
   </Box>
@@ -411,15 +433,30 @@ Lorem ipsum dolor sit amet.
               shading={5}
               grid
               atomicClass={`
-                w:70vw bg:#fff br:10px of:hidden
+                w:70vw mxH:90vh bg:#fff br:10px of:hidden
                 .image{h:100%;br:10px}
-                .image>img{h:100%;w:100%}
+                .image2{d:none;h:70vh;bg:#141414}
+                .image2>img{h:100%;w:100%;objectFit:contain}
+                .image>img{h:100%;w:100%;}
                 .content{h:100%;d:flex;jc:space-between;fxDit:column}
                 .comments{fs:1rem;m:0;p:1.5rem;bT:1px/ssolid/s#EDEDED}
               `}
+              myStyle={{
+                break: {
+                  lg: { w: '90vw' },
+                  md: {
+                    '.image': { d: 'none' },
+                    '.content': { span: 'span 2' },
+                    '.image2': { d: 'block' }
+                  }
+                }
+              }}
             >
               <Box className='image'>
-                <img src='https://images.unsplash.com/photo-1652339710187-ac698792edcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80' alt='' />
+                <img
+                  src='https://images.unsplash.com/photo-1652339710187-ac698792edcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80'
+                  alt=''
+                />
               </Box>
               <Box className='content'>
                 <ContentItem
@@ -430,14 +467,17 @@ Lorem ipsum dolor sit amet.
                   bBm='1px solid #EDEDED'
                   onClose={() => setOpen(false)}
                 />
-                <Box className='comments'>
-                  Click outside...
+                <Box className='image2'>
+                  <img
+                    src='https://images.unsplash.com/photo-1652339710187-ac698792edcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80'
+                    alt=''
+                  />
                 </Box>
+                <Box className='comments'>Click outside...</Box>
               </Box>
             </Box>
             {/* ------------- */}
           </Backdrop>
-
         </Result>
         <h3>Skeleton: done</h3>
         <CodeBlock
@@ -458,19 +498,18 @@ Lorem ipsum dolor sit amet.
           `}
         />
         <Result>
-          <Box w='250px'>
+          <Box w='100%' mxW='250px'>
             <Box flex y='center'>
-              <Skeleton h='50px' w='50px' br='25px' />
+              <Skeleton h='50px' w='50px' br='25px' m='10px 0' />
               <Box w='120px' m='0'>
-                <Skeleton />
-                <Skeleton w='70px' />
+                <Skeleton m='10px 0' />
+                <Skeleton m='10px 0' w='70px' />
               </Box>
             </Box>
-            <Skeleton />
-            <Skeleton />
-            <Skeleton h='150px' />
+            <Skeleton m='10px 0' />
+            <Skeleton m='10px 0' />
+            <Skeleton m='10px 0' h='150px' />
           </Box>
-
         </Result>
         <h3>Accordion: done</h3>
         <h3>Navbar: done</h3>
