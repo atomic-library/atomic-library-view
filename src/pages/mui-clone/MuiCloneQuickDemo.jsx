@@ -454,16 +454,6 @@ Lorem ipsum dolor sit amet.
                 'md .content span:span/s2',
                 'md .image2 d:block h:60vh'
               ]}
-              myStyle={{
-                break: {
-                  lg: { w: '90vw' },
-                  md: {
-                    '.image': { d: 'none' },
-                    '.content': { span: 'span 2' },
-                    '.image2': { d: 'block' }
-                  }
-                }
-              }}
             >
               <Box className='image'>
                 <img
