@@ -383,25 +383,19 @@ Lorem ipsum dolor sit amet.
   <Box
     shading={5}
     grid
-    atomicClass={
-      ${BACKDROPCLASSES}
-      .image{h:100%;br:10px}
-      .image2{d:none;h:70vh;bg:#141414}
-      .image2>img{h:100%;w:100%;objectFit:contain}
-      .image>img{h:100%;w:100%;}
-      .content{h:100%;d:flex;jc:space-between;fxDit:column}
-      ${BACKDROPCLASSESEND}
-    }
-    myStyle={{
-      break: {
-        lg: { w: '90vw' },
-        md: {
-          '.image': { d: 'none' },
-          '.content': { span: 'span 2' },
-          '.image2': { d: 'block' }
-        }
-      }
-    }}
+    atomicClass={[
+      '* * w:70vw mxH:90vh bg:#fff br:10px of:hidden',
+      '* .image h:100% br:10px',
+      '* .image>img h:100% w:100%',
+      '* .image2 d:none h:70vh bg:#141414',
+      '* .image2>img h:100% w:100% objectFit:contain',
+      '* .content h:100% d:flex jc:space-between fxDit:column',
+      '* .comments fs:1rem m:0 p:1.5rem bT:1px/ssolid/s#EDEDED',
+      'lg * w:90vw',
+      'md .image d:none',
+      'md .content span:span/s2',
+      'md .image2 d:block h:60vh'
+    ]}
   >
     <Box className='image'>
       <img src='https://exampleUrl.com/image' />
@@ -432,15 +426,6 @@ Lorem ipsum dolor sit amet.
             <Box
               shading={5}
               grid
-              // atomicClass={`
-              //   w:70vw mxH:90vh bg:#fff br:10px of:hidden
-              //   .image{h:100%;br:10px}
-              //   .image2{d:none;h:70vh;bg:#141414}
-              //   .image2>img{h:100%;w:100%;objectFit:contain}
-              //   .image>img{h:100%;w:100%;}
-              //   .content{h:100%;d:flex;jc:space-between;fxDit:column}
-              //   .comments{fs:1rem;m:0;p:1.5rem;bT:1px/ssolid/s#EDEDED}
-              // `}
               atomicClass={[
                 '* * w:70vw mxH:90vh bg:#fff br:10px of:hidden',
                 '* .image h:100% br:10px',
