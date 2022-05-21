@@ -446,6 +446,7 @@ export default App
           `}
         />
         <h2>Theme</h2>
+        <p>you can see the default values of Theme <a className='link' href='https://github.com/atomic-library/atomic-library-core/blob/master/lib/Theme.js'>clicking here</a> </p>
         <p>You can use <code>createTheme()</code> to modify the breackpoints, the Max Widths, create variants
           and add custom values, for example:
         </p>
