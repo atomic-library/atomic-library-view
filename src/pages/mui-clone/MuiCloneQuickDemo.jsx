@@ -505,6 +505,7 @@ Lorem ipsum dolor sit amet.
 
         <h3>Collapse: done</h3>
         <h3>Slider: done</h3>
+
       </Content>
     </Layout>
   )
