@@ -125,9 +125,7 @@ const MyComponent = () => {
 
         `}
         />
-        <p>The idea is not that you style the whole component using this function,
-          but that you have the ability to modify any property of the component.
-        </p>
+
         <p> you can use camel case or abbreviations e.g.</p>
         <CodeBlock
           language='jsx'
@@ -185,7 +183,7 @@ customizer({w: '100%', h: '100px', br: '5px'})
           <li>Tfoot</li>
           <li>Textarea</li>
         </ul>
-        <p>The following elements have <code>width: 100%; margin: auto;</code> by default. </p>
+        <p>The following elements have <code>margin: auto; width: 100%;</code> by default. </p>
         <ul>
           <li>Box</li>
           <li>Section</li>
@@ -196,6 +194,7 @@ customizer({w: '100%', h: '100px', br: '5px'})
           <li>Article</li>
           <li>Form</li>
         </ul>
+        <h3>myStyle</h3>
         <p>All elements recieves <code>myStyle</code> as prop. for example:</p>
         <CodeBlock
           language='jsx'
@@ -237,49 +236,169 @@ const Component = () => {
           `}
         />
 
+        <h3>atomicClass</h3>
+        <p>This prop receives a string or an array of strings</p>
+        <p>if you pass a string you can pass it any property accepted by the customizer function which will be applied directly to the component</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+<Box 
+  atomicClass="bg:#ccc h:100px p:1rem br:10px "
+/>
+          `}
+        />
+        <p>if you pass it an array of strings, the structure is as follows: breakpoint, selectors, properties, also you have to pass an asterisk if you don't want to add any of the values in the structure</p>
+        <CodeBlock
+          language='jsx'
+          code={`
+<Box 
+  atomicClass={[
+    "* * bg:#f2f2f2 c:#1a1a1aa br:10px p:1rem",
+    "* :hover bg:red c:blue",
+    "sm .child p:1rem/s2rem m:20px" // use /s for add an space
+  ]}
+/>
+          `}
+        />
         <p>but in addition to these they also receive other very useful properties such as:</p> <br />
-        <p>FlexBox props. The following props are useful for creating a flexible containers</p>
-        <ul>
-          <li>flex</li>
-          <li>inlineFlex</li>
-          <li>flexWrap</li>
-          <li>gap</li>
-          <li>flowColumn</li>
-          <li>flowColumnReverse</li>
-          <li>flowRow</li>
-          <li>flowRowReverse</li>
-          <li>center</li>
-          <li>y</li>
-          <li>x</li>
-        </ul>
+        <p>FlexBox props. The following props are useful for creating  flexible containers</p>
+        <table>
+          <tr>
+            <th>prop</th>
+            <th>description</th>
+          </tr>
+          <tr>
+            <td>flex</td>
+            <td>display: flex;</td>
+          </tr>
+          <tr>
+            <td>inlineFlex</td>
+            <td>display: inline-flex;</td>
+          </tr>
+          <tr>
+            <td>flexWrap</td>
+            <td>flex-wrap: wrap;</td>
+          </tr>
+          <tr>
+            <td>gap</td>
+            <td>grid-gap: value;</td>
+          </tr>
+          <tr>
+            <td>flowColumn</td>
+            <td>flex-direction: column;</td>
+          </tr>
+          <tr>
+            <td>flowColumnReverse</td>
+            <td>flex-direction: column-reverse;</td>
+          </tr>
+          <tr>
+            <td>flowRow</td>
+            <td>flex-direction: row;</td>
+          </tr>
+          <tr>
+            <td>flowRowReverse</td>
+            <td>flex-direction: row-reverse;</td>
+          </tr>
+          <tr>
+            <td>center</td>
+            <td>align-items: center; justify-content: center;</td>
+          </tr>
+          <tr>
+            <td>y</td>
+            <td>align-items: value;</td>
+          </tr>
+          <tr>
+            <td>x</td>
+            <td>justify-content: velue;</td>
+          </tr>
+        </table>
+
         <br />
         <p>Css Grid. The following props are useful for creating a grid containers </p>
-        <ul>
-          <li>grid</li>
-          <li>cols</li>
-          <li>rows</li>
-          <li>areas</li>
-          <li>gap</li>
-          <li>flowColumn</li>
-          <li>flowRow</li>
-          <li>center</li>
-          <li>y</li>
-          <li>x</li>
-        </ul>
+        <table>
+          <tr>
+            <th>prop</th>
+            <th>description</th>
+          </tr>
+          <tr>
+            <td>grid</td>
+            <td>display: grid; grid-template-columns: 1fr 1fr;</td>
+          </tr>
+          <tr>
+            <td>cols</td>
+            <td>grid-template-columns: value;</td>
+          </tr>
+          <tr>
+            <td>areas</td>
+            <td>grid-template-areas: value;</td>
+          </tr>
+          <tr>
+            <td>gap</td>
+            <td>grid-gap: value;</td>
+          </tr>
+          <tr>
+            <td>flowColumn</td>
+            <td>grid-auto-flow: column;</td>
+          </tr>
+          <tr>
+            <td>flowRow</td>
+            <td>grid-auto-flow: row;</td>
+          </tr>
+          <tr>
+            <td>center</td>
+            <td>align-items: center; justify-items: center;</td>
+          </tr>
+          <tr>
+            <td>y</td>
+            <td>align-items: value;</td>
+          </tr>
+          <tr>
+            <td>x</td>
+            <td>justify-items: center;</td>
+          </tr>
+        </table>
         <br />
         <p>Others. The following props are useful for modify some styles </p>
-        <ul>
-          <li>insertStyleBefore</li>
-          <li>rounded</li>
-          <li>fullRounded</li>
-          <li>size</li>
-          <li>shading</li>
-          <li>gradient</li>
-          <li>variants</li>
-          <li>myStyle</li>
-          <li>superStyle</li>
-          <li>insertStyle</li>
-        </ul>
+
+        <table>
+          <tr>
+            <td>insertStyleBefore</td>
+            <td>insert code directly to the styled-component at the beginning</td>
+          </tr>
+          <tr>
+            <td>insertStyle</td>
+            <td>insert code directly to the styled-component at the end</td>
+          </tr>
+          <tr>
+            <td>rounded</td>
+            <td>border-radius: 5px</td>
+          </tr>
+          <tr>
+            <td>fullRounded</td>
+            <td>border-radius: 150px</td>
+          </tr>
+          <tr>
+            <td>size</td>
+            <td>go to size section</td>
+          </tr>
+          <tr>
+            <td>shding</td>
+            <td>go to shading section</td>
+          </tr>
+          <tr>
+            <td>variant</td>
+            <td>go to variants section</td>
+          </tr>
+          <tr>
+            <td>superStyle</td>
+            <td>this is the same as myStyle but the code is inserted after myStyle</td>
+          </tr>
+          <tr>
+            <td>raised</td>
+            <td>this is a shadow</td>
+          </tr>
+        </table>
+
         <br />
         <h2>Provider</h2>
         <p>You can use <code>AtomicContext</code> to pass values to several elements. for example:</p>
