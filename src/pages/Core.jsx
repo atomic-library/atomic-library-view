@@ -3,6 +3,7 @@ import { Box, Box as Content, Ul } from 'atomic-library-core'
 import { Link } from 'react-router-dom'
 
 const Core = () => {
+  const backtick = '`'
   return (
     <Layout>
       <Content size='md' p='50px 30px'>
@@ -237,26 +238,25 @@ const Component = () => {
         />
 
         <h3>atomicClass</h3>
-        <p>This prop receives a string or an array of strings</p>
-        <p>if you pass a string you can pass it any property accepted by the customizer function which will be applied directly to the component</p>
+        <p>style a style-component using single values and tailwind classes</p>
         <CodeBlock
           language='jsx'
           code={`
 <Box 
-  atomicClass="bg:#ccc h:100px p:1rem br:10px "
+  atomicClass="bg:#ccc h:100px p:1rem br:10px md|:hover|bg:#f2f2f2"
 />
-          `}
-        />
-        <p>if you pass it an array of strings, the structure is as follows: breakpoint, selectors, properties, also you have to pass an asterisk if you don't want to add any of the values in the structure</p>
-        <CodeBlock
-          language='jsx'
-          code={`
 <Box 
-  atomicClass={[
-    "* * bg:#f2f2f2 c:#1a1a1aa br:10px p:1rem",
-    "* :hover bg:red c:blue",
-    "sm .child p:1rem/s2rem m:20px" // use /s for add an space
-  ]}
+  atomicClass={${backtick}
+  bg:#f2f2f2 c:#1a1a1a br:10px p-4 
+  :hover{
+    bg-red500 text-blue500
+  }
+  @media-sm{
+    .child{
+      py-4 px-8 m-5
+    }
+  }
+${backtick}}
 />
           `}
         />
