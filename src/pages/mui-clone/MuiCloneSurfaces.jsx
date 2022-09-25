@@ -4,7 +4,7 @@ import { Box as Content } from 'atomic-library-core'
 const MuiCloneSurfaces = () => {
   return (
     <Layout>
-      <Content size='md' p='50px 30px'>
+      <Content size='md' atmClass='p:50px_30px'>
         surfaces
       </Content>
     </Layout>

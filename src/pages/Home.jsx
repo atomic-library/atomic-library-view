@@ -22,7 +22,7 @@ const Box2 = styled(Box)`
 const Home = () => {
   return (
     <Layout>
-      <Content size='md' p='50px 30px'>
+      <Content size='md' atmClass="p:50px_30px">
         <h1>Atomic Library</h1> <br />
         <Box h='300px' myStyle={{ img: { objectFit: 'cover' } }}>
           <img

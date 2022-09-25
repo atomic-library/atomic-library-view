@@ -8,31 +8,16 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { AiOutlineMenu } from 'react-icons/ai'
 // -----------------------STYLE--------------------------//
 
-const menuStyle = {
-  bR: '1px solid #E8E8E8',
-  m: '0',
-  w: '250px',
-  bg: '#fff',
-  pt: 'fixed',
-  t: '80px',
-  br: '0px 0px 60px 0px',
-  h: 'calc(100vh - 80px)',
-  overflowY: 'auto',
-  overflowX: 'hidden',
-  p: '20px 10px 40px 40px',
-  z: '1',
-  '::-webkit-scrollbar': {
-    w: '5px',
-    m: '100px'
-  },
-  '::-webkit-scrollbar-thumb': {
-    bg: '#E8E8E8', br: '10px'
-  },
-  '::-webkit-scrollbar-track': {
-    m: '0 0 50px 0'
-  }
-
-}
+const menuStyle = `
+  bR:1px_solid_#E8E8E8 m:0 w:250px bg:#fff fixed t:80px 
+  br:0px_0px_60px_0px
+  h:calc(100vh_-_80px) ofY:auto ofX:hidden p:20px_10px_40px_40px z:1
+  ::-webkit-scrollbar{ w:5px m:100p }
+  ::-webkit-scrollbar-thumb{ bg:#E8E8E8 br: 10px }
+  ::-webkit-scrollbar-track{ m:0 0 50px }
+  tt:left_.5s
+`
+ 
 // ---------------------END-STYLE--------------------------//
 
 const Dashboard = ({ children }) => {
@@ -42,8 +27,8 @@ const Dashboard = ({ children }) => {
     <>
       <AppBar onClickMenu={() => setOpen(!open)} />
       {/* lateral menu */}
-      <Navbar location='left' position='fixed' myStyle={{ ...menuStyle, break: { lg: { l: !open && '-100%', tt: 'left .5s' } } }}>
-        <Nav flex flexWrap flowColumn>
+      <Navbar location='left' position='fixed' atmClass={`${menuStyle} `} >
+        <Nav atmClass="flex flex-wrap flexDirection:column">
           <NavLink exact to='/dashboard/home' activeClassName='active'>Home</NavLink>
           <NavLink exact to='/dashboard/core' activeClassName='active'>Core</NavLink>
           <NavLink exact to='/dashboard/components' activeClassName='active'>Components</NavLink>
@@ -52,7 +37,7 @@ const Dashboard = ({ children }) => {
           <NavLink exact to='/dashboard/my-system' activeClassName='active'>My System</NavLink>
           <NavLink exact onClick={() => setStateMui(!stateMui)} to='/dashboard/mui-clone' activeClassName='active'>Mui Clone <IoIosArrowDown style={{ marginLeft: '10px' }} /></NavLink>
           <Collapse collapsed={stateMui}>
-            <Box flex flowColumn flexWrap mL='1rem'>
+            <Box atmClass="flex flex-col flex-wrap mL:1rem">
               <NavLink exact to='/dashboard/mui-clone/quick-demo' activeClassName='active'>Quick Demo</NavLink>
               <NavLink exact to='/dashboard/mui-clone/inputs' activeClassName='active'>Inputs</NavLink>
               <NavLink exact to='/dashboard/mui-clone/data-display' activeClassName='active'>Data display</NavLink>

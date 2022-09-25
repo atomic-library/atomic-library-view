@@ -4,7 +4,7 @@ import { Box } from 'atomic-library-core'
 const Hooks = () => {
   return (
     <Layout>
-      <Box h='calc(100vh - 150px)' flex center>
+      <Box  atmClass='h:calc(100vh-150px) flex ai:center jc:center'>
         <h1>Not Content Yet</h1>
       </Box>
     </Layout>

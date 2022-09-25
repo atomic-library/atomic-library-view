@@ -7,20 +7,13 @@ const AppBar = ({ onClickMenu }) => {
   return (
     <Navbar
       position='fixed'
-      nav={{ mxW: '100%', ai: 'center', jc: 'space-between' }}
-      header={{ br: '0px 0px 10px 0px', b: '1px solid #E8E8E8' }}
-      span='header'
-      p='0px 40px'
-      bg='#fff'
-      z='3'
+      nav="mxW:100% ai:center jc:space-between"
+      header="br:0px_0px_10px_0px b:1px_solid_#E8E8E8 area:header p:0px_40px bg:#fff z:3"
     >
       <Link className='link-title' to='/'>Atomic library</Link>
       <Nav>
         <Link to='/dashboard/home'>Documentation</Link>
-        <Span onClick={onClickMenu} myStyle={{ d: 'none', break: { lg: { d: 'inline' } } }}><AiOutlineMenu /></Span>
-
-        {/* <Link to='/dashboard/Forum'>Forum</Link>
-        <Link to='/dashboard/join'>Join</Link> */}
+        <Span onClick={onClickMenu} atmClass="d:none lg|inline"><AiOutlineMenu /></Span>
       </Nav>
     </Navbar>
   )

@@ -4,7 +4,7 @@ import { Box as Content } from 'atomic-library-core'
 const MuiCloneUtils = () => {
   return (
     <Layout>
-      <Content size='md' p='50px 30px'>
+      <Content size='md' atmClass='p:50px_30px'>
         <h3>getTypes</h3>
         <p>This is a style function, so it returns code that can be inserted into a styled-component. This function receives an object with the following entries:</p>
         <table>

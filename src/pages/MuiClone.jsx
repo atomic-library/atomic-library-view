@@ -4,7 +4,7 @@ import { Alert } from 'mui-clone'
 const MuiClone = () => {
   return (
     <Layout>
-      <Content size='md' p='50px 30px'>
+      <Content size='md' atmClas="p:50px_30px">
         <h2>Mui clone</h2>
         <p>This is a "clone" of material ui using atomic-library-core.
           it's a recreation of the most components

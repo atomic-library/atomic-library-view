@@ -16,7 +16,7 @@ const MuiCloneInputs = () => {
   const [loading, setLoading] = useState(false)
   return (
     <Layout>
-      <Content size='md' p='50px 30px'>
+      <Content size='md' atmClass='p:50px_30px'>
         <h2>Inputs</h2>
         <h3>Btn: done</h3>
 

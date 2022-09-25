@@ -473,10 +473,10 @@ atomic-library-core@^1.6.0:
   dependencies:
     styled-components "^5.3.3"
 
-atomic-library-core@^1.6.4:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/atomic-library-core/-/atomic-library-core-1.6.4.tgz#3589dd414187c1bce221c23378a29b8f26623920"
-  integrity sha512-zTQLiK2V9K0/zEXS+rMG6qUqp0Da8lSwkjuYgAWfxZSSSbURSiK9jGGkdAxU9wUyUMC/v3XxAzMT8SUEgvIYxA==
+atomic-library-core@^1.6.7:
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/atomic-library-core/-/atomic-library-core-1.6.7.tgz#5c92a499bf6f3b9a73e4e0c5567ed7d3faea44d0"
+  integrity sha512-gakZIOQZf1cKDJocRSaXn8IZIYTOTCULTxlIEEcslGxsEJYs93sIcAF4CZcEE7QyCv5MoEUpDwbXi1e22KnVwQ==
   dependencies:
     styled-components "^5.3.3"
 

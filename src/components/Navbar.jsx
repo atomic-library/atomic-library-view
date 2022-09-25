@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Nav, useCompContext } from 'atomic-library-core'
+import { Header, Nav, useComponentContext } from 'atomic-library-core'
 
 const headerStyles = {
   top: 'width: 100%; height: 80px; top: 0; aling-items: center;',
@@ -14,21 +14,27 @@ const navStyles = {
   left: 'flex-direction: column; max-height: 800px;'
 }
 const Navbar = ({ children, location, header, nav, position, ...rest }) => {
-  const { ...props } = useCompContext() || false
+  const { ...props } = useComponentContext() || false
   return (
     <Header
-      insertStyleBefore={headerStyles[location || 'top'] + '.active {font-weight: 500;}'}
-      myStyle={{ pt: position, m: '0px' }}
-      superStyle={header}
+      atmClass={`
+        <PURE>
+          ${headerStyles[location || 'top'] + '.active {font-weight: 500;}'}
+        </PURE>
+        m:0px pt:${position}
+        ${header}
+      `}
       {...props}
       {...rest}
     >
       <Nav
-        flex
-        x='space-between'
-        insertStyleBefore={navStyles[location || 'top']}
-        myStyle={{ h: '100%', w: '100%', m: 'auto', p: '10px' }}
-        superStyle={nav}
+        atmClass={`
+        flex jc:space-between h:100% w:100% m:auto p:10px
+        <PURE>
+          ${navStyles[location || 'top']}
+        </PURE>
+        ${nav} 
+        `}
       >
         {children}
       </Nav>

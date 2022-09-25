@@ -90,6 +90,7 @@ h2, h3, h4, h5, h6 {
 .main-title {
   font-size: 5.625rem;
   font-weight: 900;
+  margin: 0;
 }
 .main-title span{
   background: linear-gradient(to right, #007CF0 0%, #00DFD8 100%);
